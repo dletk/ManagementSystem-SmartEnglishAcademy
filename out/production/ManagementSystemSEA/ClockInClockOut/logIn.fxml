@@ -19,24 +19,24 @@
          </image></ImageView>
       <Pane prefHeight="505.0" prefWidth="800.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="98.0" text="ĐĂNG NHẬP HỆ THỐNG" textAlignment="CENTER" textFill="#1b78f7">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="36.0" text="ĐĂNG NHẬP HỆ THỐNG" textAlignment="CENTER" textFill="#1b78f7">
                <font>
                   <Font name="Times New Roman Bold" size="40.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="224.0" layoutY="183.0" prefHeight="25.0" prefWidth="109.0" text="Username" textFill="#1b78f7">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="119.0" prefHeight="25.0" prefWidth="109.0" text="Username" textFill="#1b78f7">
                <font>
                   <Font name="Times New Roman Bold" size="22.0" />
                </font>
             </Label>
-            <TextField layoutX="345.0" layoutY="182.0" prefHeight="27.0" prefWidth="224.0" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="224.0" layoutY="238.0" prefHeight="25.0" prefWidth="109.0" text="Password" textFill="#1b78f7">
+            <TextField fx:id="userNameTextField" layoutX="348.0" layoutY="118.0" prefHeight="27.0" prefWidth="224.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="174.0" prefHeight="25.0" prefWidth="109.0" text="Password" textFill="#1b78f7">
                <font>
                   <Font name="Times New Roman Bold" size="22.0" />
                </font>
             </Label>
-            <PasswordField layoutX="345.0" layoutY="237.0" prefHeight="27.0" prefWidth="224.0" />
-            <Button id="login" layoutX="185.0" layoutY="301.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="188.0" stylesheets="@../styles/buttonLogin.css" text="Log in" textFill="#3a42ab">
+            <PasswordField fx:id="passwordTextField" layoutX="348.0" layoutY="173.0" prefHeight="27.0" prefWidth="224.0" />
+            <Button id="login" layoutX="168.0" layoutY="270.0" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="45.0" prefWidth="188.0" stylesheets="@../styles/buttonLogin.css" text="Log in" textFill="#3a42ab">
                <font>
                   <Font name="Times New Roman Bold" size="22.0" />
                </font>
@@ -45,11 +45,16 @@
                   <String fx:value="button" />
                </styleClass>
             </Button>
-            <Button layoutX="475.0" layoutY="301.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="188.0" text="Forget password">
+            <Button layoutX="458.0" layoutY="270.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="188.0" text="Forget password">
                <font>
                   <Font name="Times New Roman Bold" size="22.0" />
                </font>
             </Button>
+            <Label fx:id="wrongPasswordLabel" alignment="TOP_CENTER" layoutX="235.0" layoutY="215.0" prefHeight="27.0" prefWidth="331.0" text=" Sai mật khẩu hoặc tên đăng nhập" textAlignment="CENTER" textFill="RED" visible="false">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="22.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

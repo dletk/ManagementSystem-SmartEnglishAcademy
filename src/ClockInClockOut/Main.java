@@ -1,6 +1,5 @@
 package ClockInClockOut;
 
-import Database.DatabaseManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,10 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("clockInClockOut.fxml"));
-
-//        Load the database
-        DatabaseManager databaseManager = new DatabaseManager();
+        Parent root = FXMLLoader.load(getClass().getResource("logIn.fxml"));
 
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root));
