@@ -72,12 +72,16 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="510.0" prefWidth="264.0" spacing="50.0">
                <children>
-                  <Button id="clockIn" mnemonicParsing="false" prefHeight="52.0" prefWidth="153.0" stylesheets="@../styles/buttonHoursTracking.css" text="Clock in">
+                  <Button id="clockIn" mnemonicParsing="false" prefHeight="52.0" prefWidth="153.0" stylesheets="@../styles/buttonHoursTracking.css" text="Clock in" textFill="#3a42ab">
                      <font>
                         <Font name="Impact" size="26.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" text="Clock out" />
+                  <Button id="clockOut" mnemonicParsing="false" prefHeight="52.0" prefWidth="153.0" stylesheets="@../styles/buttonHoursTracking.css" text="Clock out">
+                     <font>
+                        <Font name="Impact" size="26.0" />
+                     </font>
+                  </Button>
                   <Button mnemonicParsing="false" text="Log out" />
                </children>
             </VBox>
