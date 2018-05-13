@@ -26,6 +26,8 @@ public class LogInController {
      */
     public LogInController() {
         this.modelManager = new ModelManager();
+
+        modelManager.addUser("admin", 1216702299, "Duc", "Le", "dle@macalester.edu", "admin", "abc123");
     }
 
     /**

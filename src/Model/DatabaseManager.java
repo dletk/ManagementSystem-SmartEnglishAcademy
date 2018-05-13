@@ -25,8 +25,8 @@ public class DatabaseManager {
             connection = DriverManager.getConnection(url);
 
 //            Create the table if not exist
-            createTable("Users", "userID INT PRIMARY KEY NOT NULL, " +
-                    "username TEXT NOT NULL, password TEXT NOT NULL, firstname TEXT, lastname TEXT, email TEXT, phone INT, role TEXT");
+            createTable("Users", "userID INT PRIMARY KEY NOT NULL UNIQUE, " +
+                    "username TEXT NOT NULL UNIQUE, password TEXT NOT NULL, firstname TEXT, lastname TEXT, email TEXT, phone INT, role TEXT");
             createTable("Shifts", "startingTime TEXT PRIMARY KEY NOT NULL, endingTime TEXT, length REAL, " +
                     "userID INT, FOREIGN KEY(userID) REFERENCES Users(userID)");
         } catch (Exception e) {
@@ -81,7 +81,7 @@ public class DatabaseManager {
 
             while (result.next()) {
                 users.add(new User(result.getInt("userID"),
-                        result.getInt("phone"),
+                        result.getLong("phone"),
                         result.getString("username"),
                         result.getString("firstname"),
                         result.getString("lastname"),
@@ -132,6 +132,7 @@ public class DatabaseManager {
             }
         } catch (Exception e) {
             System.out.println(e);
+//            TODO: HANDLE THE ERROR OF EXISTING ID/USERNAME HERE BY SQL CODE
             e.printStackTrace();
         }
     }
@@ -149,16 +150,81 @@ public class DatabaseManager {
             String data = entry.getValue();
             try {
                 PreparedStatement statement = connection.prepareStatement("UPDATE Users SET " +
-                        field + " = " + data + " WHERE userID= " + userID);
+                        field + " = " + data + " WHERE userID= "  + userID);
                 statement.executeUpdate();
+
+
+                createUsersList();
+                createShifts();
             } catch (Exception e) {
                 e.printStackTrace();
+                return false;
             }
         }
-
-        createUsersList();
-        createShifts();
-
         return true;
+    }
+
+    /**
+     * Method to add a new user to the database. This method also check and report if the new user is not qualified.
+     * @param userID
+     * @param phone
+     * @param username
+     * @param firstname
+     * @param lastname
+     * @param email
+     * @param role
+     * @param password
+     * @return true if the user is added successfully
+     */
+    protected boolean addUser(int userID, long phone, String username, String firstname, String lastname, String email, String role, String password) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO Users(" +
+                    "userID, username, password, firstname, lastname, email, phone, role)" +
+                    "VALUES (" +
+                    Integer.toString(userID) +",'" + username + "','" + password + "','" + firstname + "','" + lastname +
+                    "','" + email + "'," + Long.toString(phone) + ",'" + role +
+                    "')");
+            statement.executeUpdate();
+
+            createShifts();
+            createUsersList();
+
+            return true;
+        } catch (Exception e) {
+            System.out.println(e);
+            e.printStackTrace();
+
+            return false;
+        }
+    }
+
+    /**
+     * Method to add a new shift. In theory, a shift should be added with only starting time. The endingTime and length should
+     * be added later when the user finishes his shift.
+     * @param userID id of the working user
+     * @return
+     */
+    protected boolean addShift(int userID) {
+        try {
+//            Get the current time in second
+            long currentTime = System.currentTimeMillis() / 1000;
+
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO Shifts(userID, startingTime)" +
+                    "VALUES (" +
+                    Integer.toString(userID) +
+                    ", + datetime(" + Long.toString(currentTime) +
+                        ", 'unixepoch', 'localtime')" +
+                    ")");
+
+            statement.executeUpdate();
+
+//            Update the list of shift with the new updated version
+            createShifts();
+
+            return true;
+        } catch (Exception e) {
+            System.out.println(e);
+            return false;
+        }
     }
 }

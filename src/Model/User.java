@@ -2,10 +2,11 @@ package Model;
 
 public class User {
 
-    private int userID, phone;
+    private int userID;
+    private long phone;
     private String username, firstname, lastname, email, role, password;
 
-    public User(int userID, int phone, String username, String firstname, String lastname, String email, String role, String password) {
+    protected User(int userID, long phone, String username, String firstname, String lastname, String email, String role, String password) {
         this.userID = userID;
         this.phone = phone;
         this.username = username;
@@ -20,7 +21,7 @@ public class User {
         return userID;
     }
 
-    public int getPhone() {
+    public long getPhone() {
         return phone;
     }
 
