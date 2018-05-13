@@ -4,8 +4,13 @@ import Model.ModelManager;
 import Model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
@@ -40,20 +45,48 @@ public class LogInController {
     }
 
     /**
-     * Method to test the functionality of the scene, TODO: Comment out or delete when done testing
+     * Method to callback when log in button is clicked
      *
      * @param event the Action event from the button
      */
-    public void buttonClicked(ActionEvent event) {
+    public void logInClicked(ActionEvent event) throws Exception {
+        ArrayList<User> users = modelManager.getUsers();
+        for (User user: users) {
+            if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
+//                TODO:Switch to the scene of hours tracking
+//                wrongPasswordLabel.setText("Thành công!");
+                Button butn = (Button) event.getSource();
+                Stage stage = (Stage) butn.getScene().getWindow();
+
+//                Load the new Scene
+                FXMLLoader hoursTracking = new FXMLLoader(getClass().getResource("hoursTracking.fxml"));
+                hoursTracking.setController(new HoursTrackingController(modelManager, user));
+
+                stage.setScene(new Scene(hoursTracking.load()));
+                return;
+
+            } else {
+                wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");
+                return;
+            }
+        }
+        wrongPasswordLabel.setVisible(true);
+    }
+
+    /**
+     * Callback method for forget password button
+     * @param event
+     */
+    public void forgetPasswordClicked(ActionEvent event) {
         ArrayList<User> users = modelManager.getUsers();
         for (User user: users) {
             if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
 //                TODO:Switch to the scene of hours tracking
                 modelManager.addShift(user.getUserID());
-                wrongPasswordLabel.setText("Thành công!");
-                System.out.println(modelManager.getShifts());
+                return;
             } else {
                 wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");
+                return;
             }
         }
         wrongPasswordLabel.setVisible(true);

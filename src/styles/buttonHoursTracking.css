@@ -1,0 +1,15 @@
+.button#clockIn {
+    -fx-background-color: #3aab6a;
+}
+
+.button#clockOut {
+    -fx-background-color: #F53838;
+}
+
+.button#clockIn:hover, .button#clockOut:hover {
+    -fx-background-color: #E8E81A;
+}
+
+.button#clockIn:pressed {
+    -fx-background-color: #DED00D;
+}
