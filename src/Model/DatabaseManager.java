@@ -105,10 +105,14 @@ public class DatabaseManager {
 
     /**
      * Method to retrieve the shifts data from the database
+     * This method retrieve the shifts in the order of most recent shift.
+     * The result is a map of user and his list of shifts, with the order is most recent.
      */
     private void createShifts() {
+        shifts = new HashMap<>();
+
         try {
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM Shifts");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM Shifts ORDER BY datetime(startingTime) DESC");
             ResultSet result = statement.executeQuery();
 
             while (result.next()) {

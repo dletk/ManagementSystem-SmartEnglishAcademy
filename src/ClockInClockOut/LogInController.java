@@ -27,7 +27,7 @@ public class LogInController {
     public LogInController() {
         this.modelManager = new ModelManager();
 
-        modelManager.addUser("admin", 1216702299, "Duc", "Le", "dle@macalester.edu", "admin", "abc123");
+//        modelManager.addUser("admin", 1216702299, "Duc", "Le", "dle@macalester.edu", "admin", "abc123");
     }
 
     /**
@@ -49,7 +49,9 @@ public class LogInController {
         for (User user: users) {
             if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
 //                TODO:Switch to the scene of hours tracking
+                modelManager.addShift(user.getUserID());
                 wrongPasswordLabel.setText("Thành công!");
+                System.out.println(modelManager.getShifts());
             } else {
                 wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");
             }

@@ -62,4 +62,15 @@ public class ModelManager {
 //        After added user, get the users list from database again
         users = databaseManager.getUsers();
     }
+
+    /**
+     * Method to add a new shift for a user
+     * @param userID the id of the user
+     */
+    public void addShift(int userID) {
+        databaseManager.addShift(userID);
+
+//        Update the shifts list from database again
+        shifts = databaseManager.getShifts();
+    }
 }
