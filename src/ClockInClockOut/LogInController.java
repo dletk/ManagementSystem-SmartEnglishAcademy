@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
 
-public class ClockInClockOutController {
+public class LogInController {
 
     private ModelManager modelManager;
 
@@ -24,7 +24,7 @@ public class ClockInClockOutController {
      * The constructor of the Controller
      * NOTE: This constructor is called before the FXML elements are injected. DO NOT access any FXML element here.
      */
-    public ClockInClockOutController() {
+    public LogInController() {
         this.modelManager = new ModelManager();
     }
 
@@ -40,12 +40,13 @@ public class ClockInClockOutController {
     /**
      * Method to test the functionality of the scene, TODO: Comment out or delete when done testing
      *
-     * @param event the MouseEvent
+     * @param event the Action event from the button
      */
     public void buttonClicked(ActionEvent event) {
         ArrayList<User> users = modelManager.getUsers();
         for (User user: users) {
             if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
+//                TODO:Switch to the scene of hours tracking
                 wrongPasswordLabel.setText("Thành công!");
             } else {
                 wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");

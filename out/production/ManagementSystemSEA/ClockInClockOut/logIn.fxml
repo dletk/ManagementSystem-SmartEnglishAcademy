@@ -1,61 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/buttonLogin.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClockInClockOut.ClockInClockOutController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/buttonLogin.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClockInClockOut.LogInController">
    <children>
       <ImageView fitHeight="171.0" fitWidth="527.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../res/posterSEA.png" />
          </image></ImageView>
-      <Pane prefHeight="505.0" prefWidth="800.0">
+      <VBox alignment="CENTER" spacing="20.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="36.0" text="ĐĂNG NHẬP HỆ THỐNG" textAlignment="CENTER" textFill="#1b78f7">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="ĐĂNG NHẬP HỆ THỐNG" textAlignment="CENTER" textFill="#1b78f7">
                <font>
                   <Font name="Times New Roman Bold" size="40.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" top="40.0" />
+               </VBox.margin>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="119.0" prefHeight="25.0" prefWidth="109.0" text="Username" textFill="#1b78f7">
-               <font>
-                  <Font name="Times New Roman Bold" size="22.0" />
-               </font>
-            </Label>
-            <TextField fx:id="userNameTextField" layoutX="348.0" layoutY="118.0" prefHeight="27.0" prefWidth="224.0" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="174.0" prefHeight="25.0" prefWidth="109.0" text="Password" textFill="#1b78f7">
-               <font>
-                  <Font name="Times New Roman Bold" size="22.0" />
-               </font>
-            </Label>
-            <PasswordField fx:id="passwordTextField" layoutX="348.0" layoutY="173.0" prefHeight="27.0" prefWidth="224.0" />
-            <Button id="login" layoutX="168.0" layoutY="270.0" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="45.0" prefWidth="188.0" stylesheets="@../styles/buttonLogin.css" text="Log in" textFill="#3a42ab">
-               <font>
-                  <Font name="Times New Roman Bold" size="22.0" />
-               </font>
-               <styleClass>
-                  <String fx:value="button" />
-                  <String fx:value="button" />
-               </styleClass>
-            </Button>
-            <Button layoutX="458.0" layoutY="270.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="188.0" text="Forget password">
-               <font>
-                  <Font name="Times New Roman Bold" size="22.0" />
-               </font>
-            </Button>
-            <Label fx:id="wrongPasswordLabel" alignment="TOP_CENTER" layoutX="235.0" layoutY="215.0" prefHeight="27.0" prefWidth="331.0" text=" Sai mật khẩu hoặc tên đăng nhập" textAlignment="CENTER" textFill="RED" visible="false">
+            <HBox alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="109.0" text="Username" textFill="#1b78f7">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userNameTextField" prefHeight="27.0" prefWidth="224.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="109.0" text="Password" textFill="#1b78f7">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordTextField" prefHeight="27.0" prefWidth="224.0" />
+               </children>
+            </HBox>
+            <Label fx:id="wrongPasswordLabel" alignment="TOP_CENTER" prefHeight="27.0" prefWidth="331.0" text=" Sai mật khẩu hoặc tên đăng nhập" textAlignment="CENTER" textFill="RED" visible="false">
                <font>
                   <Font name="Times New Roman Bold Italic" size="22.0" />
                </font>
             </Label>
+            <HBox alignment="CENTER" spacing="100.0">
+               <children>
+                  <Button id="login" defaultButton="true" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="45.0" prefWidth="188.0" stylesheets="@../styles/buttonLogin.css" text="Log in" textFill="#3a42ab">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="button" />
+                        <String fx:value="button" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="188.0" text="Forget password">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
-      </Pane>
+      </VBox>
    </children>
 </VBox>
