@@ -94,6 +94,7 @@ public class DatabaseManager {
 
     /**
      * Method to get the shifts for other classes
+     *
      * @return the shifts map
      */
     public HashMap<User, ArrayList<Shift>> getShifts() {
@@ -139,18 +140,21 @@ public class DatabaseManager {
 
     /**
      * Method to update the user data in the database with the given id and new field data
-     * @param userID the userID to update data
+     *
+     * @param userID        the userID to update data
      * @param fieldsAndData the map contains the field and the newdata for that field
      * @return true if the database is updated successfully
      */
     protected boolean updateUser(String userID, HashMap<String, String> fieldsAndData) {
 //        Loop through each field in the new data and update
-        for (Map.Entry<String, String> entry: fieldsAndData.entrySet()) {
+        for (Map.Entry<String, String> entry : fieldsAndData.entrySet()) {
             String field = entry.getKey();
             String data = entry.getValue();
             try {
+//                TODO: HERE, BREAK DOWN THE STATEMENT TO 2 CASES, if fields is phone or userID, then leave it, if not,
+//                put the '' around the data to indicate string value.
                 PreparedStatement statement = connection.prepareStatement("UPDATE Users SET " +
-                        field + " = " + data + " WHERE userID= "  + userID);
+                        field + " = " + data + " WHERE userID= " + userID);
                 statement.executeUpdate();
 
 
@@ -172,6 +176,7 @@ public class DatabaseManager {
 
     /**
      * Method to add a new user to the database. This method also check and report if the new user is not qualified.
+     *
      * @param userID
      * @param phone
      * @param username
@@ -187,7 +192,7 @@ public class DatabaseManager {
             PreparedStatement statement = connection.prepareStatement("INSERT INTO Users(" +
                     "userID, username, password, firstname, lastname, email, phone, role)" +
                     "VALUES (" +
-                    Integer.toString(userID) +",'" + username + "','" + password + "','" + firstname + "','" + lastname +
+                    Integer.toString(userID) + ",'" + username + "','" + password + "','" + firstname + "','" + lastname +
                     "','" + email + "'," + Long.toString(phone) + ",'" + role +
                     "')");
             statement.executeUpdate();
@@ -214,6 +219,7 @@ public class DatabaseManager {
     /**
      * Method to add a new shift. In theory, a shift should be added with only starting time. The endingTime and length should
      * be added later when the user finishes his shift.
+     *
      * @param userID id of the working user
      * @return
      */
@@ -226,7 +232,7 @@ public class DatabaseManager {
                     "VALUES (" +
                     Integer.toString(userID) +
                     ", + datetime(" + Long.toString(currentTime) +
-                        ", 'unixepoch', 'localtime')" +
+                    ", 'unixepoch', 'localtime')" +
                     ")");
 
             statement.executeUpdate();

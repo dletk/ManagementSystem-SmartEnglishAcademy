@@ -5,7 +5,6 @@ import Model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,7 +12,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class LogInController {
 
@@ -38,6 +36,7 @@ public class LogInController {
 
     /**
      * This is the constructor to create the LoginController from other stages and reuse the current modelManager
+     *
      * @param modelManager the current modelManager, passed by the current scene
      */
     public LogInController(ModelManager modelManager) {
@@ -60,7 +59,7 @@ public class LogInController {
      */
     public void logInClicked(ActionEvent event) throws Exception {
         ArrayList<User> users = modelManager.getUsers();
-        for (User user: users) {
+        for (User user : users) {
             if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
 //                TODO:Switch to the scene of hours tracking
 //                wrongPasswordLabel.setText("Thành công!");
@@ -84,16 +83,17 @@ public class LogInController {
 
     /**
      * Callback method for forget password button
+     *
      * @param event
      */
     public void forgetPasswordClicked(ActionEvent event) {
         ArrayList<User> users = modelManager.getUsers();
-        for (User user: users) {
+        for (User user : users) {
             if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
 //                HashMap<String, String> fieldsData = new HashMap<>();
 //                fieldsData.put("userID", "3");
 
-                modelManager.addUser("admin", 1215702299, "Trinh", "Nguyen", "trinh060606@gmail.com","user", "ducle");
+                modelManager.addUser("admin", 1215702299, "Trinh", "Nguyen", "trinh060606@gmail.com", "user", "ducle");
                 return;
             } else {
                 wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");

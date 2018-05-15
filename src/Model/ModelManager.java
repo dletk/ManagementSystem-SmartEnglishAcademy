@@ -64,10 +64,30 @@ public class ModelManager {
     }
 
     /**
-     * Method to add a new shift for a user
+     * Method to begin the clock in process for this user
+     * @param user
+     * @return true if the clock in process is done successfully
+     */
+    public boolean clockIn(User user) {
+//        Get the most recent shift of this user
+        Shift lastShift = shifts.get(user).get(0);
+
+//        Check if this shift is complete (with ending time)
+        if (lastShift.getEndingTime().isEmpty()) {
+//            The last shift is not clocked out
+            return false;
+        } else {
+//            The last shift is clocked out. Good to clock in.
+//            TODO: create updateShift in database manager class
+            databaseManager.updateShift();
+        }
+    }
+
+    /**
+     * Method to add a new shift for a user after checking for validation
      * @param userID the id of the user
      */
-    public void addShift(int userID) {
+    private void addShift(int userID) {
         databaseManager.addShift(userID);
 
 //        Update the shifts list from database again
