@@ -82,7 +82,7 @@
                         <Font name="Impact" size="26.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" text="Log out" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutClicked" text="Log out" />
                </children>
             </VBox>
          </children>

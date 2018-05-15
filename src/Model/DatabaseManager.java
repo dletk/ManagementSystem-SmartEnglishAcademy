@@ -1,9 +1,6 @@
 package Model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -136,7 +133,6 @@ public class DatabaseManager {
             }
         } catch (Exception e) {
             System.out.println(e);
-//            TODO: HANDLE THE ERROR OF EXISTING ID/USERNAME HERE BY SQL CODE
             e.printStackTrace();
         }
     }
@@ -160,7 +156,13 @@ public class DatabaseManager {
 
                 createUsersList();
                 createShifts();
-            } catch (Exception e) {
+            } catch (SQLException e) {
+                //            TODO: HANDLE THE ERROR OF EXISTING ID/USERNAME HERE BY SQL CODE
+//                Get the code of the exception
+                int code = e.getErrorCode();
+
+                System.out.println("====> SQL CODE: " + Integer.toString(code));
+
                 e.printStackTrace();
                 return false;
             }
@@ -194,7 +196,14 @@ public class DatabaseManager {
             createUsersList();
 
             return true;
-        } catch (Exception e) {
+        } catch (SQLException e) {
+            //            TODO: HANDLE THE ERROR OF EXISTING ID/USERNAME HERE BY SQL CODE
+
+            int code = e.getErrorCode();
+//            TODO: The return code is 19 - Constraint violation. This is due to duplicate username or password
+            System.out.println("====> SQL CODE: " + Integer.toString(code));
+
+
             System.out.println(e);
             e.printStackTrace();
 

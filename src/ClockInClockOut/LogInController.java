@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class LogInController {
 
@@ -33,6 +34,14 @@ public class LogInController {
         this.modelManager = new ModelManager();
 
 //        modelManager.addUser("admin", 1216702299, "Duc", "Le", "dle@macalester.edu", "admin", "abc123");
+    }
+
+    /**
+     * This is the constructor to create the LoginController from other stages and reuse the current modelManager
+     * @param modelManager the current modelManager, passed by the current scene
+     */
+    public LogInController(ModelManager modelManager) {
+        this.modelManager = modelManager;
     }
 
     /**
@@ -67,10 +76,10 @@ public class LogInController {
 
             } else {
                 wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");
+                wrongPasswordLabel.setVisible(true);
                 return;
             }
         }
-        wrongPasswordLabel.setVisible(true);
     }
 
     /**
@@ -81,8 +90,10 @@ public class LogInController {
         ArrayList<User> users = modelManager.getUsers();
         for (User user: users) {
             if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
-//                TODO:Switch to the scene of hours tracking
-                modelManager.addShift(user.getUserID());
+//                HashMap<String, String> fieldsData = new HashMap<>();
+//                fieldsData.put("userID", "3");
+
+                modelManager.addUser("admin", 1215702299, "Trinh", "Nguyen", "trinh060606@gmail.com","user", "ducle");
                 return;
             } else {
                 wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");

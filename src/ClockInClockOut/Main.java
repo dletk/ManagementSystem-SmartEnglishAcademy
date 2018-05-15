@@ -14,10 +14,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent logIn = FXMLLoader.load(getClass().getResource("logIn.fxml"));
+        FXMLLoader logIn = new FXMLLoader(getClass().getResource("logIn.fxml"));
+        logIn.setController(new LogInController());
 
         primaryStage.setTitle("Trung tâm anh ngữ SEA");
-        primaryStage.setScene(new Scene(logIn));
+        primaryStage.setScene(new Scene(logIn.load()));
 
         primaryStage.show();
     }
