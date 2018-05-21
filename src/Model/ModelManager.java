@@ -1,6 +1,9 @@
 package Model;
 
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -28,7 +31,8 @@ public class ModelManager {
 
     /**
      * Method to update the data of a user
-     * @param user the user to update the data
+     *
+     * @param user          the user to update the data
      * @param fieldsAndData the data to update in the database
      * @return true if data is updated
      */
@@ -45,6 +49,7 @@ public class ModelManager {
 
     /**
      * The method to add a user to the database thorough the Model manager
+     *
      * @param username
      * @param phone
      * @param firstname
@@ -65,6 +70,7 @@ public class ModelManager {
 
     /**
      * Method to begin the clock in process for this user
+     *
      * @param user
      * @return true if the clock in process is done successfully
      */
@@ -90,6 +96,7 @@ public class ModelManager {
 
     /**
      * Method to clock out a shift
+     *
      * @param user the user with the shift to be clocked out
      * @return true if the shift is clocked out successfully
      */
@@ -111,6 +118,7 @@ public class ModelManager {
 
     /**
      * Method to add a new shift for a user after checking for validation
+     *
      * @param userID the id of the user
      */
     private void addShift(int userID) {
@@ -121,9 +129,17 @@ public class ModelManager {
     }
 
     private boolean addEndingTime(Shift shift) {
+        long currentTime = System.currentTimeMillis();
+
         // The time to put in as input for database should be in seconds
-        long currentTime = System.currentTimeMillis() / 1000;
-        boolean result = databaseManager.updateShift(shift, "endingTime", Long.toString(currentTime));
+        boolean result = databaseManager.updateShift(shift, "endingTime", Long.toString(currentTime/1000));
+
+        long lengthInSeconds = calculateTimeDifference(shift.getDate()+ " " + shift.getStartingTime(), new Date(currentTime));
+
+        double length = ((double) lengthInSeconds) / 3600.0;
+        DecimalFormat formatLength = new DecimalFormat("0.##");
+
+        databaseManager.updateShift(shift, "length", formatLength.format(length));
 
         if (result) {
             // Update the shifts list from database
@@ -131,6 +147,26 @@ public class ModelManager {
             return true;
         } else {
             return false;
+        }
+    }
+
+    /**
+     * A small helper method to calculate the time difference in seconds between 2 time
+     *
+     * @param startingTime the starting time in the format of YYYY:MM:dd HH:mm:ss
+     * @param endingTime   the ending time in this case is a Date object
+     * @return number of seconds different between 2 time records
+     */
+    private long calculateTimeDifference(String startingTime, Date endingTime) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        try {
+            Date start = formatter.parse(startingTime);
+            return (endingTime.getTime() - start.getTime()) / 1000;
+        } catch (Exception e) {
+            System.out.println("Cannot parse date value");
+            e.printStackTrace();
+            return 0;
         }
     }
 }

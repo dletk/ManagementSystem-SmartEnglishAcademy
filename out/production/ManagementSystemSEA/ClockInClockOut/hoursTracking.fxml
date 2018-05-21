@@ -35,10 +35,10 @@
                   </Label>
                   <TableView fx:id="tableHours" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="528.0" prefWidth="776.0">
                     <columns>
-                      <TableColumn fx:id="dateColumn" editable="false" prefWidth="75.0" text="NGÀY" />
-                      <TableColumn fx:id="startingTimeColumn" prefWidth="75.0" text="BẮT ĐẦU" />
-                        <TableColumn fx:id="endingTimeColumn" prefWidth="75.0" text="KẾT THÚC" />
-                        <TableColumn fx:id="lengthColumn" prefWidth="75.0" text="THỜI LƯỢNG (giờ)" />
+                      <TableColumn fx:id="dateColumn" editable="false" prefWidth="75.0" style="-fx-alignment: CENTER_RIGHT;" text="NGÀY" />
+                      <TableColumn fx:id="startingTimeColumn" prefWidth="75.0" style="-fx-alignment: CENTER_RIGHT;" text="BẮT ĐẦU" />
+                        <TableColumn fx:id="endingTimeColumn" prefWidth="75.0" style="-fx-alignment: CENTER_RIGHT;" text="KẾT THÚC" />
+                        <TableColumn fx:id="lengthColumn" prefWidth="75.0" style="-fx-alignment: CENTER_RIGHT;" text="THỜI LƯỢNG (giờ)" />
                     </columns>
                      <VBox.margin>
                         <Insets bottom="10.0" left="20.0" right="20.0" />

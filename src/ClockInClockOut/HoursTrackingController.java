@@ -13,9 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class HoursTrackingController {
 
@@ -85,7 +83,8 @@ public class HoursTrackingController {
 
     /**
      * Callback method for clock in button
-     * @param event
+     *
+     * @param event the event of clicking
      */
     public void clockInClicked(ActionEvent event) {
 
@@ -107,10 +106,16 @@ public class HoursTrackingController {
         populateTableWithData();
     }
 
+    /**
+     * Callback method for clock out button
+     *
+     * @param event the clicking event
+     */
     public void clockOutClicked(ActionEvent event) {
         // TODO: Confirm user decision to clock out.
 
         boolean result = modelManager.clockOut(user);
+
 
         if (result) {
             // Clock out has been done successfully
@@ -121,5 +126,4 @@ public class HoursTrackingController {
         // Update the hours table
         populateTableWithData();
     }
-
 }

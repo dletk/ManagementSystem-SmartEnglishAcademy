@@ -250,9 +250,10 @@ public class DatabaseManager {
 
     /**
      * Method to update the data of a current shift in database of a user
+     *
      * @param shift the shift to be updated
      * @param field the field in the shift database to be updated
-     * @param data the data to update. NOTICE: Time needs to be in second
+     * @param data  the data to update. NOTICE: Time needs to be in second
      * @return true if the shift is updated successfully.
      */
     protected boolean updateShift(Shift shift, String field, String data) {
@@ -272,13 +273,13 @@ public class DatabaseManager {
                 statement = connection.prepareStatement("UPDATE Shifts SET " +
                         field + "=" + " +  datetime(" + data +
                         ", 'unixepoch', 'localtime') " +
-                        "WHERE userID="+Integer.toString(userID) + " AND " + "startingTime=" + "'" + startingTime+ "'");
+                        "WHERE userID=" + Integer.toString(userID) + " AND " + "startingTime=" + "'" + startingTime + "'");
             } else {
                 // The userID and length field have the underlined data to be integer and float, so the syntax does not need
                 // to include the ' '
                 statement = connection.prepareStatement("UPDATE Shifts SET " +
                         field + "=" + data +
-                        "WHERE userID="+Integer.toString(userID) + " AND " + "startingTime=" + "'" + startingTime+ "'");
+                        " WHERE userID=" + Integer.toString(userID) + " AND " + "startingTime=" + "'" + startingTime + "'");
             }
 
             statement.executeUpdate();
@@ -289,6 +290,7 @@ public class DatabaseManager {
 
         } catch (SQLException e) {
             int errorCode = e.getErrorCode();
+            System.out.println(e.getSQLState());
             System.out.println("Cannot update shift!, error code: " + Integer.toString(errorCode));
             return false;
         }
