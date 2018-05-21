@@ -95,9 +95,30 @@ public class HoursTrackingController {
 //        confirm.initModality(Modality.APPLICATION_MODAL);
 
 //        Let modelManager start the clock in process
-        modelManager.clockIn(user);
+        boolean result = modelManager.clockIn(user);
+
+        if (result) {
+            // Clock in has been done successfully.
+        } else {
+            // User is not allowed to clock in because miss clock out.
+        }
 
 //        Update the hours table with the new data
+        populateTableWithData();
+    }
+
+    public void clockOutClicked(ActionEvent event) {
+        // TODO: Confirm user decision to clock out.
+
+        boolean result = modelManager.clockOut(user);
+
+        if (result) {
+            // Clock out has been done successfully
+        } else {
+            // User is not allowed to clock out because of missing clock in
+        }
+
+        // Update the hours table
         populateTableWithData();
     }
 

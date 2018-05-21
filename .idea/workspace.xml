@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seaDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/seaDatabase.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/HoursTrackingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/HoursTrackingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/hoursTracking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/hoursTracking.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ModelManager.java" afterDir="false" />
     </list>
@@ -82,8 +82,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="100">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,12 +94,10 @@
       <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/LogInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="146">
+              <caret line="33" column="76" selection-start-line="33" selection-start-column="76" selection-end-line="33" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1279#1280#0" expanded="true" />
-                <element signature="e#1327#1328#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,16 +106,18 @@
       <file leaf-file-name="DatabaseManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/DatabaseManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="223" column="25" selection-start-line="223" selection-start-column="25" selection-end-line="223" selection-end-column="25" />
+            <state relative-caret-position="223">
+              <caret line="284" column="52" selection-start-line="284" selection-start-column="52" selection-end-line="284" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1526356550910" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
-                <marker date="1526356550910" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
-                <marker date="1526356550910" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
-                <marker date="1526356550910" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
-                <marker date="1526356550910" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
-                <marker date="1526356550910" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
+                <element signature="e#3065#3066#0" expanded="true" />
+                <element signature="e#3094#3095#0" expanded="true" />
+                <marker date="1526876794129" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
+                <marker date="1526876794129" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
+                <marker date="1526876794129" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
+                <marker date="1526876794129" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
+                <marker date="1526876794129" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
+                <marker date="1526876794129" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
               </folding>
             </state>
           </provider>
@@ -126,31 +126,47 @@
       <file leaf-file-name="Shift.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Shift.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HoursTrackingController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/HoursTrackingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+            <state relative-caret-position="-110">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1210#1211#0" expanded="true" />
-                <element signature="e#1254#1255#0" expanded="true" />
+                <element signature="e#764#765#0" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModelManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+              <folding>
+                <element signature="e#1055#1056#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HoursTrackingController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/HoursTrackingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+            <state relative-caret-position="118">
+              <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#574#575#0" expanded="true" />
@@ -200,14 +216,14 @@
         <option value="$PROJECT_DIR$/src/ClockInClockOut/ClockInClockOutController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/hoursTracking.fxml" />
         <option value="$PROJECT_DIR$/src/Model/User.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shift.java" />
         <option value="$PROJECT_DIR$/src/styles/buttonHoursTracking.css" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/logIn.fxml" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Main.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/LogInController.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shift.java" />
         <option value="$PROJECT_DIR$/src/Model/DatabaseManager.java" />
-        <option value="$PROJECT_DIR$/src/ClockInClockOut/HoursTrackingController.java" />
         <option value="$PROJECT_DIR$/src/Model/ModelManager.java" />
+        <option value="$PROJECT_DIR$/src/ClockInClockOut/HoursTrackingController.java" />
       </list>
     </option>
   </component>
@@ -221,10 +237,10 @@
     <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="813" />
+    <option name="height" value="815" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -235,8 +251,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,7 +290,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,12 +431,13 @@
       <workItem from="1526090293116" duration="78000" />
       <workItem from="1526090392758" duration="8273000" />
       <workItem from="1526187833964" duration="12926000" />
-      <workItem from="1526353810390" duration="4168000" />
+      <workItem from="1526353810390" duration="4434000" />
+      <workItem from="1526872523506" duration="4649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39924000" />
+    <option name="totallyTimeSpent" value="44839000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,7 +449,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="815" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -445,11 +462,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3784916" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32960895" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37743732" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32960895" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21316166" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2160229" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -485,18 +502,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -522,8 +527,6 @@
           <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -544,8 +547,6 @@
           <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -602,12 +603,14 @@
           <caret line="101" selection-start-line="101" selection-end-line="101" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1526356550910" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
-            <marker date="1526356550910" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
-            <marker date="1526356550910" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3094#3095#0" expanded="true" />
+            <marker date="1526876794129" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
+            <marker date="1526876794129" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
+            <marker date="1526876794129" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
           </folding>
         </state>
       </provider>
@@ -628,8 +631,6 @@
           <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -681,12 +682,14 @@
           <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1526356550910" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
-            <marker date="1526356550910" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
-            <marker date="1526356550910" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3094#3095#0" expanded="true" />
+            <marker date="1526876794129" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
+            <marker date="1526876794129" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
+            <marker date="1526876794129" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
           </folding>
         </state>
       </provider>
@@ -706,8 +709,6 @@
           <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -718,12 +719,14 @@
           <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1526356550910" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
-            <marker date="1526356550910" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
-            <marker date="1526356550910" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3094#3095#0" expanded="true" />
+            <marker date="1526876794129" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
+            <marker date="1526876794129" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
+            <marker date="1526876794129" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
           </folding>
         </state>
       </provider>
@@ -759,8 +762,6 @@
           <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -786,12 +787,14 @@
           <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1526356550910" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
-            <marker date="1526356550910" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
-            <marker date="1526356550910" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3094#3095#0" expanded="true" />
+            <marker date="1526876794129" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
+            <marker date="1526876794129" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
+            <marker date="1526876794129" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
           </folding>
         </state>
       </provider>
@@ -812,8 +815,6 @@
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -850,8 +851,6 @@
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -874,18 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="137" column="22" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="47" column="33" lean-forward="true" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding>
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#967#968#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,33 +917,52 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shift.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/src.zip!/java/sql/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="246">
+          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/DatabaseManager.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Shift.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="223" column="25" selection-start-line="223" selection-start-column="25" selection-end-line="223" selection-end-column="25" />
+        <state relative-caret-position="-110">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+          <folding>
+            <element signature="e#1055#1056#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1526356550910" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
-            <marker date="1526356550910" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
-            <marker date="1526356550910" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
-            <marker date="1526356550910" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="100">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -965,36 +971,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="146">
+          <caret line="33" column="76" selection-start-line="33" selection-start-column="76" selection-end-line="33" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1327#1328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="284" column="52" selection-start-line="284" selection-start-column="52" selection-end-line="284" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3094#3095#0" expanded="true" />
+            <marker date="1526876794129" expanded="true" signature="1481:1507" ph="CREATE TABLE... " />
+            <marker date="1526876794129" expanded="true" signature="1481:1508" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1527" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="1481:1589" ph="CREATE TABLE... missingValue" />
+            <marker date="1526876794129" expanded="true" signature="2229:2248" ph="SELECT * FRO... Users" />
+            <marker date="1526876794129" expanded="true" signature="3491:3511" ph="SELECT * FRO... Shifts" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/HoursTrackingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+        <state relative-caret-position="280">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1210#1211#0" expanded="true" />
-            <element signature="e#1254#1255#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
           </folding>
         </state>
       </provider>

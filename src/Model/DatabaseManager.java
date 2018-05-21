@@ -246,4 +246,51 @@ public class DatabaseManager {
             return false;
         }
     }
+
+
+    /**
+     * Method to update the data of a current shift in database of a user
+     * @param shift the shift to be updated
+     * @param field the field in the shift database to be updated
+     * @param data the data to update. NOTICE: Time needs to be in second
+     * @return true if the shift is updated successfully.
+     */
+    protected boolean updateShift(Shift shift, String field, String data) {
+        // Get userID and startingTime, date because these are the identifiers for Shift in database
+        int userID = shift.getUser().getUserID();
+        String startingTime = shift.getStartingTime();
+        String date = shift.getDate();
+
+        // In the database, startingTime includes date, but we break them down when we create our model
+        startingTime = date + " " + startingTime;
+
+        PreparedStatement statement;
+
+        try {
+            if (field.equals("startingTime") || field.equals("endingTime")) {
+                // These fields have the underlined data be a String, so the syntax are different with int or float
+                statement = connection.prepareStatement("UPDATE Shifts SET " +
+                        field + "=" + " +  datetime(" + data +
+                        ", 'unixepoch', 'localtime') " +
+                        "WHERE userID="+Integer.toString(userID) + " AND " + "startingTime=" + "'" + startingTime+ "'");
+            } else {
+                // The userID and length field have the underlined data to be integer and float, so the syntax does not need
+                // to include the ' '
+                statement = connection.prepareStatement("UPDATE Shifts SET " +
+                        field + "=" + data +
+                        "WHERE userID="+Integer.toString(userID) + " AND " + "startingTime=" + "'" + startingTime+ "'");
+            }
+
+            statement.executeUpdate();
+            // Update the shifts list with the new values
+            createShifts();
+
+            return true;
+
+        } catch (SQLException e) {
+            int errorCode = e.getErrorCode();
+            System.out.println("Cannot update shift!, error code: " + Integer.toString(errorCode));
+            return false;
+        }
+    }
 }

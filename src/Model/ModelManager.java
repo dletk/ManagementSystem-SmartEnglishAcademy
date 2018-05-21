@@ -73,13 +73,39 @@ public class ModelManager {
         Shift lastShift = shifts.get(user).get(0);
 
 //        Check if this shift is complete (with ending time)
+//        TODO: The logic ! is only for debugging purpose. It make sure the else statment can happen
         if (lastShift.getEndingTime().isEmpty()) {
 //            The last shift is not clocked out
+            System.out.println("====> NOT ABLE TO CLOCK IN");
             return false;
         } else {
-//            The last shift is clocked out. Good to clock in.
-//            TODO: create updateShift in database manager class
-            databaseManager.updateShift();
+            //            The last shift is clocked out. Good to clock in.
+            addShift(user.getUserID());
+            System.out.println("====> CLOCKED IN");
+
+            return true;
+        }
+    }
+
+
+    /**
+     * Method to clock out a shift
+     * @param user the user with the shift to be clocked out
+     * @return true if the shift is clocked out successfully
+     */
+    public boolean clockOut(User user) {
+        // Get the most recent shift of this user
+        Shift lastShift = shifts.get(user).get(0);
+
+        // Check if this shift is complete (with ending time)
+        if (lastShift.getEndingTime().isEmpty()) {
+            // Good to clock out
+            addEndingTime(lastShift);
+            return true;
+        } else {
+            // The last shift has been clocked out, should be clocked in now
+            System.out.println("NOT ABLE TO CLOCK OUT");
+            return false;
         }
     }
 
@@ -92,5 +118,19 @@ public class ModelManager {
 
 //        Update the shifts list from database again
         shifts = databaseManager.getShifts();
+    }
+
+    private boolean addEndingTime(Shift shift) {
+        // The time to put in as input for database should be in seconds
+        long currentTime = System.currentTimeMillis() / 1000;
+        boolean result = databaseManager.updateShift(shift, "endingTime", Long.toString(currentTime));
+
+        if (result) {
+            // Update the shifts list from database
+            shifts = databaseManager.getShifts();
+            return true;
+        } else {
+            return false;
+        }
     }
 }
