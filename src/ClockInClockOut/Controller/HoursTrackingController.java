@@ -1,4 +1,4 @@
-package ClockInClockOut;
+package ClockInClockOut.Controller;
 
 import Model.ModelManager;
 import Model.Shift;
@@ -81,7 +81,7 @@ public class HoursTrackingController {
      * @param event
      */
     public void logOutClicked(ActionEvent event) throws Exception {
-//        Get the current Stage of the logOut button
+//        Get the current StagesAndScenes of the logOut button
         Button logOut = (Button) event.getSource();
         Stage stage = (Stage) logOut.getScene().getWindow();
 
@@ -102,7 +102,7 @@ public class HoursTrackingController {
     public void clockInClicked(ActionEvent event) {
 
 ////       TODO: Confirm the user decision to clock in.
-//        Stage confirm = new Stage(StageStyle.DECORATED);
+//        StagesAndScenes confirm = new StagesAndScenes(StageStyle.DECORATED);
 ////        Block all other window until this stage is closed
 //        confirm.initModality(Modality.APPLICATION_MODAL);
 

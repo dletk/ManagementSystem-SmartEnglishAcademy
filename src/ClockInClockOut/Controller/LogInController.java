@@ -1,4 +1,4 @@
-package ClockInClockOut;
+package ClockInClockOut.Controller;
 
 import Model.ModelManager;
 import Model.User;
