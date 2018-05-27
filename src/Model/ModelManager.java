@@ -132,9 +132,9 @@ public class ModelManager {
         long currentTime = System.currentTimeMillis();
 
         // The time to put in as input for database should be in seconds
-        boolean result = databaseManager.updateShift(shift, "endingTime", Long.toString(currentTime/1000));
+        boolean result = databaseManager.updateShift(shift, "endingTime", Long.toString(currentTime / 1000));
 
-        long lengthInSeconds = calculateTimeDifference(shift.getDate()+ " " + shift.getStartingTime(), new Date(currentTime));
+        long lengthInSeconds = calculateTimeDifference(shift.getDate() + " " + shift.getStartingTime(), new Date(currentTime));
 
         double length = ((double) lengthInSeconds) / 3600.0;
         DecimalFormat formatLength = new DecimalFormat("0.##");
@@ -168,5 +168,21 @@ public class ModelManager {
             e.printStackTrace();
             return 0;
         }
+    }
+
+
+    /**
+     * Method to check whether the given user is clocked in.
+     *
+     * @param user The input user to check for status
+     * @return true if the input user is clocked in. false otherwise.
+     */
+    public boolean isUserClockedIn(User user) {
+        // Get the last shift if this user
+        Shift userLastShift = shifts.get(user).get(0);
+
+        /* Check whether the last shift has ending time. If it does NOT, then this user is currently clocked in */
+        return userLastShift.getEndingTime().isEmpty();
+
     }
 }

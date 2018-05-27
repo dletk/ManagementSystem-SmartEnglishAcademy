@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -32,11 +33,20 @@ public class HoursTrackingController {
     //    Other UI elements
     @FXML
     private Button logOutButton;
+    @FXML
+    private Label statusLabel;
 
     // Variables for this class
     private User user;
     private ModelManager modelManager;
 
+    /**
+     * The constructor for the hours tracking controller
+     * Reuse the current modelManager nad receive information about current user from the calling controller
+     *
+     * @param modelManager the current modelManager to reuse
+     * @param user         the currently logged in user
+     */
     public HoursTrackingController(ModelManager modelManager, User user) {
         this.modelManager = modelManager;
         this.user = user;
@@ -45,6 +55,9 @@ public class HoursTrackingController {
     @FXML
     public void initialize() {
         this.populateTableWithData();
+
+        // Change the status label to be the correct status of the current user
+        changeStatusLabel();
     }
 
     /**
@@ -98,6 +111,8 @@ public class HoursTrackingController {
 
         if (result) {
             // Clock in has been done successfully.
+            // Change the status label to clocked in
+            changeStatusLabel();
         } else {
             // User is not allowed to clock in because miss clock out.
         }
@@ -119,11 +134,27 @@ public class HoursTrackingController {
 
         if (result) {
             // Clock out has been done successfully
+            // Change the status label to clocked out
+            changeStatusLabel();
         } else {
             // User is not allowed to clock out because of missing clock in
         }
 
         // Update the hours table
         populateTableWithData();
+    }
+
+    /**
+     * This method use to change the status label to the current status of currently logged-in user
+     */
+    private void changeStatusLabel() {
+        // Check whether the current user is clocked in
+        if (modelManager.isUserClockedIn(user)) {
+            // This user is currently clocked in
+            statusLabel.setText("Status: Clocked in");
+        } else {
+            // This user is currently clocked out
+            statusLabel.setText("Status: Clocked out");
+        }
     }
 }

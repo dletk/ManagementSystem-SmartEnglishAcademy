@@ -61,9 +61,9 @@ public class LogInController {
         ArrayList<User> users = modelManager.getUsers();
         for (User user : users) {
             if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
-//                TODO:Switch to the scene of hours tracking
-//                wrongPasswordLabel.setText("Thành công!");
                 Button butn = (Button) event.getSource();
+
+//                Switch to the scene of hours tracking
                 Stage stage = (Stage) butn.getScene().getWindow();
 
 //                Load the new Scene

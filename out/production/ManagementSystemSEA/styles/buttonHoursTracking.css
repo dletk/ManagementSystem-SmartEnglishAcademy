@@ -3,13 +3,17 @@
 }
 
 .button#clockOut {
-    -fx-background-color: #F53838;
+    -fx-background-color: #79FCC5;
 }
 
-.button#clockIn:hover, .button#clockOut:hover {
+.button#clockIn:hover, .button#clockOut:hover, .button#logOutButton:hover {
     -fx-background-color: #E8E81A;
 }
 
 .button#clockIn:pressed {
     -fx-background-color: #DED00D;
+}
+
+.button#logOutButton {
+    -fx-background-color: #F53838;
 }

@@ -19,6 +19,7 @@ public class DatabaseManager {
         String url = "jdbc:sqlite:seaDatabase.db";
 
         try {
+            // The driver manager will automatically create the file if the database does not exist
             connection = DriverManager.getConnection(url);
 
 //            Create the table if not exist
@@ -151,10 +152,16 @@ public class DatabaseManager {
             String field = entry.getKey();
             String data = entry.getValue();
             try {
-//                TODO: HERE, BREAK DOWN THE STATEMENT TO 2 CASES, if fields is phone or userID, then leave it, if not,
+//                HERE, BREAK DOWN THE STATEMENT TO 2 CASES, if fields is phone or userID, then leave it, if not,
 //                put the '' around the data to indicate string value.
-                PreparedStatement statement = connection.prepareStatement("UPDATE Users SET " +
-                        field + " = " + data + " WHERE userID= " + userID);
+                PreparedStatement statement;
+                if (field.equals("userID") || field.equals("phone")) {
+                    statement = connection.prepareStatement("UPDATE Users SET " +
+                            field + " = " + data + " WHERE userID= " + userID);
+                } else {
+                    statement = connection.prepareStatement("UPDATE Users SET " +
+                            field + " = " + "'" + data + "'" + " WHERE userID= " + userID);
+                }
                 statement.executeUpdate();
 
 
@@ -228,6 +235,8 @@ public class DatabaseManager {
 //            Get the current time in second
             long currentTime = System.currentTimeMillis() / 1000;
 
+            // the method datetime(currentTimeInSeconds, 'unixepoch', 'localtime') is provided by SQLite to help translate
+            // the input currenTime to the format YYYY:DD:MM HH:mm:ss
             PreparedStatement statement = connection.prepareStatement("INSERT INTO Shifts(userID, startingTime)" +
                     "VALUES (" +
                     Integer.toString(userID) +
