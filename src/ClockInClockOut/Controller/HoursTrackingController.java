@@ -14,7 +14,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class HoursTrackingController {
 
@@ -86,7 +88,7 @@ public class HoursTrackingController {
         Stage stage = (Stage) logOut.getScene().getWindow();
 
 //        Load the FXML sepratedly to manually set up the controller
-        FXMLLoader logIn = new FXMLLoader(getClass().getResource("logIn.fxml"));
+        FXMLLoader logIn = new FXMLLoader(getClass().getResource("../StagesAndScenes/logIn.fxml"));
 
 //        Set up the controller for logIn scene, reuse the current modelManager
         logIn.setController(new LogInController(modelManager));
@@ -101,24 +103,24 @@ public class HoursTrackingController {
      */
     public void clockInClicked(ActionEvent event) {
 
-////       TODO: Confirm the user decision to clock in.
-//        StagesAndScenes confirm = new StagesAndScenes(StageStyle.DECORATED);
-////        Block all other window until this stage is closed
-//        confirm.initModality(Modality.APPLICATION_MODAL);
+        // Confirm the user decision to clock in.
+        boolean confirmed = showConfirmationAndGetResult("clockIn");
 
-//        Let modelManager start the clock in process
-        boolean result = modelManager.clockIn(user);
+        if (confirmed) {
+            // Let modelManager start the clock in process
+            boolean result = modelManager.clockIn(user);
 
-        if (result) {
-            // Clock in has been done successfully.
-            // Change the status label to clocked in
-            changeStatusLabel();
-        } else {
-            // User is not allowed to clock in because miss clock out.
+            if (result) {
+                // Clock in has been done successfully.
+                // Change the status label to clocked in
+                changeStatusLabel();
+            } else {
+                // TODO: User is not allowed to clock in because miss clock out.
+            }
+
+            // Update the hours table with the new data
+            populateTableWithData();
         }
-
-//        Update the hours table with the new data
-        populateTableWithData();
     }
 
     /**
@@ -127,21 +129,23 @@ public class HoursTrackingController {
      * @param event the clicking event
      */
     public void clockOutClicked(ActionEvent event) {
-        // TODO: Confirm user decision to clock out.
+        // Confirm user decision to clock out.
+        boolean confirmed = showConfirmationAndGetResult("clockOut");
 
-        boolean result = modelManager.clockOut(user);
+        if (confirmed) {
+            boolean result = modelManager.clockOut(user);
 
+            if (result) {
+                // Clock out has been done successfully
+                // Change the status label to clocked out
+                changeStatusLabel();
+            } else {
+                // TODO: User is not allowed to clock out because of missing clock in
+            }
 
-        if (result) {
-            // Clock out has been done successfully
-            // Change the status label to clocked out
-            changeStatusLabel();
-        } else {
-            // User is not allowed to clock out because of missing clock in
+            // Update the hours table
+            populateTableWithData();
         }
-
-        // Update the hours table
-        populateTableWithData();
     }
 
     /**
@@ -155,6 +159,35 @@ public class HoursTrackingController {
         } else {
             // This user is currently clocked out
             statusLabel.setText("Status: Clocked out");
+        }
+    }
+
+    /**
+     * Method to show the confirmation window when clock in or clock out
+     * Get the result back to conduct further step
+     *
+     * @param action the action selected
+     * @return true if confirmed
+     */
+    private boolean showConfirmationAndGetResult(String action) {
+        Stage confirmStage = new Stage(StageStyle.DECORATED);
+        // Block all other window until this stage is closed
+        confirmStage.initModality(Modality.APPLICATION_MODAL);
+
+        // Prepare the scene
+        FXMLLoader scene = new FXMLLoader(getClass().getResource("../StagesAndScenes/confirmClockInClockOut.fxml"));
+        // Create the controller with the input is the selected action
+        ConfirmClockInClockOutController controller = new ConfirmClockInClockOutController(action);
+        scene.setController(controller);
+        try {
+            confirmStage.setScene(new Scene(scene.load()));
+            confirmStage.showAndWait();
+
+            // After the window is close, get the confirmation result
+            return controller.isConfirmed();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

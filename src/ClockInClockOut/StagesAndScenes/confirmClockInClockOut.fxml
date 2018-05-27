@@ -8,24 +8,24 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="540.0" spacing="25.0" style="-fx-background-color: #90C3D4;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="CLOCK IN" textFill="#eb0404">
+      <Label fx:id="titleLabel" text="CLOCK IN" textFill="#eb0404">
          <font>
             <Font name="Impact" size="64.0" />
          </font>
       </Label>
-      <Label text="Are you sure you want to clock in?" textFill="#1b32f5">
+      <Label fx:id="questionLabel" text="Are you sure you want to clock in?" textFill="#1b32f5">
          <font>
             <Font name="Times New Roman Bold Italic" size="24.0" />
          </font>
       </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
          <children>
-            <Button id="confirmClockIn" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" stylesheets="@../../styles/buttonHoursTracking.css" text="Yes, clock in" textFill="#e3ff0f">
+            <Button id="confirmClockIn" fx:id="confirmButton" mnemonicParsing="false" onAction="#confirmButtonClicked" prefHeight="50.0" prefWidth="150.0" stylesheets="@../../styles/buttonHoursTracking.css" text="Yes, clock in" textFill="#e3ff0f">
                <font>
                   <Font name="Impact" size="20.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Cancel" textFill="#722b2b">
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonClicked" prefHeight="50.0" prefWidth="150.0" text="Cancel" textFill="#722b2b">
                <font>
                   <Font name="Impact" size="20.0" />
                </font>

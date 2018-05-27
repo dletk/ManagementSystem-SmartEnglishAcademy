@@ -1,4 +1,4 @@
-.button#clockIn {
+.button#clockIn, .button#confirmClockIn {
     -fx-background-color: #3aab6a;
 }
 
@@ -8,6 +8,10 @@
 
 .button#clockIn:hover, .button#clockOut:hover, .button#logOutButton:hover {
     -fx-background-color: #E8E81A;
+}
+
+.button#confirmClockIn:hover {
+    -fx-background-color: #152EED;
 }
 
 .button#clockIn:pressed {

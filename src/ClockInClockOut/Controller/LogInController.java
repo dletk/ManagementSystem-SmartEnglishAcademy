@@ -67,7 +67,7 @@ public class LogInController {
                 Stage stage = (Stage) butn.getScene().getWindow();
 
 //                Load the new Scene
-                FXMLLoader hoursTracking = new FXMLLoader(getClass().getResource("hoursTracking.fxml"));
+                FXMLLoader hoursTracking = new FXMLLoader(getClass().getResource("../StagesAndScenes/hoursTracking.fxml"));
                 hoursTracking.setController(new HoursTrackingController(modelManager, user));
 
                 stage.setScene(new Scene(hoursTracking.load()));
