@@ -58,7 +58,7 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="242.0" spacing="30.0">
                <children>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="XIN CHÀO, " textFill="#1b78f7">
+                  <Label fx:id="welcomeLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="XIN CHÀO, " textFill="#1b78f7">
                      <font>
                         <Font name="Times New Roman Bold Italic" size="22.0" />
                      </font>

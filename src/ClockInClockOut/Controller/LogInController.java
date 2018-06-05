@@ -60,7 +60,7 @@ public class LogInController {
     public void logInClicked(ActionEvent event) throws Exception {
         ArrayList<User> users = modelManager.getUsers();
         for (User user : users) {
-            if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
+            if (modelManager.isValidPassword(userNameTextField.getText(), passwordTextField.getText())) {
                 Button butn = (Button) event.getSource();
 
 //                Switch to the scene of hours tracking

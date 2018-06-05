@@ -82,9 +82,11 @@ public class ConfirmClockInClockOutController {
      * @param event
      */
     private void closeWindow(ActionEvent event) {
+        // Get the current stage
         Button clickedButton = (Button) event.getSource();
         Stage confirmStage = (Stage) clickedButton.getScene().getWindow();
 
+        // Close the stage
         confirmStage.close();
     }
 }

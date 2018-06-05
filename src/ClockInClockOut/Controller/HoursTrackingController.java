@@ -37,6 +37,8 @@ public class HoursTrackingController {
     private Button logOutButton;
     @FXML
     private Label statusLabel;
+    @FXML
+    private Label welcomeLabel;
 
     // Variables for this class
     private User user;
@@ -60,6 +62,8 @@ public class HoursTrackingController {
 
         // Change the status label to be the correct status of the current user
         changeStatusLabel();
+        // Change the welcome label to the current username
+        welcomeLabel.setText("Xin chào, " + user.getFirstname());
     }
 
     /**

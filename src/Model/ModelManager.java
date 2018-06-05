@@ -69,6 +69,21 @@ public class ModelManager {
     }
 
     /**
+     * Method to check whether the entered password and username is valid from database
+     * @param username the username to log in
+     * @param password the input password for give username
+     * @return true if password is matched to username
+     */
+    public boolean isValidPassword(String username, String password) {
+        for (User user: users) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Method to begin the clock in process for this user
      *
      * @param user
@@ -79,7 +94,6 @@ public class ModelManager {
         Shift lastShift = shifts.get(user).get(0);
 
 //        Check if this shift is complete (with ending time)
-//        TODO: The logic ! is only for debugging purpose. It make sure the else statment can happen
         if (lastShift.getEndingTime().isEmpty()) {
 //            The last shift is not clocked out
             System.out.println("====> NOT ABLE TO CLOCK IN");
