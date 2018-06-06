@@ -1,0 +1,8 @@
+.button {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 50px;
+}
+
+.button:hover {
+    -fx-background-color: #E8E81A;
+}

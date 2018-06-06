@@ -86,17 +86,23 @@ public class LogInController {
      *
      * @param event
      */
-    public void forgetPasswordClicked(ActionEvent event) {
+    public void adminLogInClicked(ActionEvent event) throws Exception{
         ArrayList<User> users = modelManager.getUsers();
         for (User user : users) {
-            if (user.getUsername().equals(userNameTextField.getText()) && user.getPassword().equals(passwordTextField.getText())) {
-//                HashMap<String, String> fieldsData = new HashMap<>();
-//                fieldsData.put("userID", "3");
+            if (modelManager.isValidAdmin(userNameTextField.getText(), passwordTextField.getText())) {
+                FXMLLoader adminPage = new FXMLLoader(getClass().getResource("../StagesAndScenes/AdminPage.fxml"));
+                adminPage.setController(new AdminPageController(modelManager, user));
 
-                modelManager.addUser("admin", 1215702299, "Trinh", "Nguyen", "trinh060606@gmail.com", "user", "ducle");
+                Button butn = (Button) event.getSource();
+
+//                Switch to the scene of hours tracking
+                Stage stage = (Stage) butn.getScene().getWindow();
+
+                stage.setScene(new Scene(adminPage.load()));
                 return;
             } else {
-                wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");
+                wrongPasswordLabel.setText("You are not an admin or wrong password!");
+                wrongPasswordLabel.setVisible(true);
                 return;
             }
         }

@@ -84,6 +84,21 @@ public class ModelManager {
     }
 
     /**
+     * Method to check whether the entered password and username is a valid admin
+     * @param username the admin username
+     * @param password password
+     * @return true if the given username and password is from an admin
+     */
+    public boolean isValidAdmin(String username, String password) {
+        for (User user: users) {
+            if (user.getRole().equals("admin") && user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Method to begin the clock in process for this user
      *
      * @param user

@@ -48,7 +48,7 @@
                   <PasswordField fx:id="passwordTextField" prefHeight="27.0" prefWidth="224.0" />
                </children>
             </HBox>
-            <Label fx:id="wrongPasswordLabel" alignment="TOP_CENTER" prefHeight="27.0" prefWidth="331.0" text=" Sai mật khẩu hoặc tên đăng nhập" textAlignment="CENTER" textFill="RED" visible="false">
+            <Label fx:id="wrongPasswordLabel" alignment="TOP_CENTER" prefHeight="27.0" prefWidth="576.0" text=" Sai mật khẩu hoặc tên đăng nhập" textAlignment="CENTER" textFill="RED" visible="false">
                <font>
                   <Font name="Times New Roman Bold Italic" size="22.0" />
                </font>
@@ -64,7 +64,7 @@
                         <String fx:value="button" />
                      </styleClass>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#forgetPasswordClicked" prefHeight="45.0" prefWidth="188.0" text="Forget password">
+                  <Button mnemonicParsing="false" onAction="#adminLogInClicked" prefHeight="45.0" prefWidth="188.0" text="Admin Log in">
                      <font>
                         <Font name="Times New Roman Bold" size="22.0" />
                      </font>

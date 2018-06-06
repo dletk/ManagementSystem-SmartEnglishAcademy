@@ -96,7 +96,6 @@ public class HoursTrackingController {
 
 //        Set up the controller for logIn scene, reuse the current modelManager
         logIn.setController(new LogInController(modelManager));
-
         stage.setScene(new Scene(logIn.load()));
     }
 
