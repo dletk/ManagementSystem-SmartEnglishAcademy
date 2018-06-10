@@ -20,7 +20,7 @@
          </image></ImageView>
       <VBox alignment="CENTER" spacing="20.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="ĐĂNG NHẬP HỆ THỐNG" textAlignment="CENTER" textFill="#1b78f7">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="HOURS TRACKING SYSTEM" textAlignment="CENTER" textFill="#1b78f7">
                <font>
                   <Font name="Times New Roman Bold" size="40.0" />
                </font>

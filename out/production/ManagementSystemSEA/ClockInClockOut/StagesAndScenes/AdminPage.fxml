@@ -15,7 +15,7 @@
       </ImageView>
       <VBox alignment="CENTER" prefHeight="432.0" prefWidth="800.0" spacing="30.0">
          <children>
-            <Button fx:id="addUserButton" mnemonicParsing="false" stylesheets="@../../styles/adminPage.css" text="Add user" textFill="#da2d2d">
+            <Button fx:id="addUserButton" mnemonicParsing="false" onAction="#addUserButtonClicked" stylesheets="@../../styles/adminPage.css" text="Add user" textFill="#da2d2d">
                <font>
                   <Font name="Impact" size="24.0" />
                </font>

@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class AdminPageController {
@@ -30,6 +31,11 @@ public class AdminPageController {
 
     }
 
+    /**
+     * Callback method for logoutButton
+     * @param event
+     * @throws Exception
+     */
     public void logOutButtonClicked(ActionEvent event) throws Exception {
         // Get the current StagesAndScenes of the logOut button
         Button logOut = (Button) event.getSource();
@@ -42,5 +48,28 @@ public class AdminPageController {
         logIn.setController(new LogInController(modelManager));
 
         stage.setScene(new Scene(logIn.load()));
+    }
+
+
+    /**
+     * Callback method for addUserButton
+     * @param event
+     * @throws Exception
+     */
+    public void addUserButtonClicked(ActionEvent event) throws Exception {
+        // Popup a new window for adding user
+        Stage addUserStage = new Stage();
+        // Block all other stage
+        addUserStage.initModality(Modality.APPLICATION_MODAL);
+
+        // Load the FXML
+        FXMLLoader addUserPage = new FXMLLoader(getClass().getResource("../StagesAndScenes/AddUserPage.fxml"));
+
+        // Set up the controller for addUserPage, passing the current modelManager to reuse
+        addUserPage.setController(new AddNewUserController(modelManager));
+
+        // Show and wait for the stage to be closed
+        addUserStage.setScene(new Scene(addUserPage.load()));
+        addUserStage.showAndWait();
     }
 }

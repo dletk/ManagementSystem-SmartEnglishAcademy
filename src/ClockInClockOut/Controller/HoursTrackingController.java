@@ -63,7 +63,7 @@ public class HoursTrackingController {
         // Change the status label to be the correct status of the current user
         changeStatusLabel();
         // Change the welcome label to the current username
-        welcomeLabel.setText("Xin chào, " + user.getFirstname());
+        welcomeLabel.setText("Welcome, " + user.getFirstname());
     }
 
     /**
