@@ -14,11 +14,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
-public class HoursTrackingController {
+public class HoursTrackingController extends ConfirmableController {
 
     //    The hours tracking table elements
     @FXML
@@ -107,7 +105,7 @@ public class HoursTrackingController {
     public void clockInClicked(ActionEvent event) {
 
         // Confirm the user decision to clock in.
-        boolean confirmed = showConfirmationAndGetResult("clockIn");
+        boolean confirmed = showConfirmationAndGetResult("clock in");
 
         if (confirmed) {
             // Let modelManager start the clock in process
@@ -133,7 +131,7 @@ public class HoursTrackingController {
      */
     public void clockOutClicked(ActionEvent event) {
         // Confirm user decision to clock out.
-        boolean confirmed = showConfirmationAndGetResult("clockOut");
+        boolean confirmed = showConfirmationAndGetResult("clock out");
 
         if (confirmed) {
             boolean result = modelManager.clockOut(user);
@@ -162,35 +160,6 @@ public class HoursTrackingController {
         } else {
             // This user is currently clocked out
             statusLabel.setText("Status: Clocked out");
-        }
-    }
-
-    /**
-     * Method to show the confirmation window when clock in or clock out
-     * Get the result back to conduct further step
-     *
-     * @param action the action selected
-     * @return true if confirmed
-     */
-    private boolean showConfirmationAndGetResult(String action) {
-        Stage confirmStage = new Stage(StageStyle.DECORATED);
-        // Block all other window until this stage is closed
-        confirmStage.initModality(Modality.APPLICATION_MODAL);
-
-        // Prepare the scene
-        FXMLLoader scene = new FXMLLoader(getClass().getResource("../StagesAndScenes/confirmClockInClockOut.fxml"));
-        // Create the controller with the input is the selected action
-        ConfirmClockInClockOutController controller = new ConfirmClockInClockOutController(action);
-        scene.setController(controller);
-        try {
-            confirmStage.setScene(new Scene(scene.load()));
-            confirmStage.showAndWait();
-
-            // After the window is close, get the confirmation result
-            return controller.isConfirmed();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
         }
     }
 }

@@ -6,20 +6,21 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class AddNewUserController {
+public class AddNewUserController extends ConfirmableController {
     // Elements for getting info of user
     @FXML private TextField firstNameTextField;
     @FXML private TextField lastNameTextField;
     @FXML private TextField userNameTextField;
-    @FXML private TextField passwordTextField;
+    @FXML private PasswordField passwordField;
     @FXML private TextField emailTextField;
     @FXML private TextField phoneTextField;
     @FXML private ChoiceBox<String> roleChoiceBox;
 
-    // Controller buttons
+    // ConfirmableController buttons
     @FXML private Button addUserButton;
     @FXML private Button cancelButton;
 
@@ -33,6 +34,7 @@ public class AddNewUserController {
     @FXML
     public void initialize() {
         roleChoiceBox.setItems(FXCollections.observableArrayList("admin", "employee"));
+        roleChoiceBox.setValue("employee");
     }
 
     /**
@@ -41,7 +43,7 @@ public class AddNewUserController {
      */
     public void addUserButtonClicked(ActionEvent event) {
         String username = userNameTextField.getText();
-        String password = passwordTextField.getText();
+        String password = passwordField.getText();
         if (username.isEmpty() || password.isEmpty()) {
             System.out.println("Username or password is empty, cannot add user");
             return;
@@ -52,7 +54,11 @@ public class AddNewUserController {
             String phone = phoneTextField.getText();
             String role = roleChoiceBox.getValue();
 
-            modelManager.addUser(username, Long.parseLong(phone), firstName, lastName, email, role, password);
+            boolean confirmed = showConfirmationAndGetResult("add user",
+                    "Are you sure you want to add this user as an "+role+"?");
+            if (confirmed) {
+                modelManager.addUser(username, Long.parseLong(phone), firstName, lastName, email, role, password);
+            }
         }
     }
 

@@ -25,7 +25,7 @@ public class LogInController {
     private TextField passwordTextField, userNameTextField;
 
     /**
-     * The constructor of the Controller
+     * The constructor of the ConfirmableController
      * NOTE: This constructor is called before the FXML elements are injected. DO NOT access any FXML element here.
      */
     public LogInController() {
@@ -97,7 +97,6 @@ public class LogInController {
 
 //                Switch to the scene of hours tracking
                 Stage stage = (Stage) butn.getScene().getWindow();
-
                 stage.setScene(new Scene(adminPage.load()));
                 return;
             } else {
