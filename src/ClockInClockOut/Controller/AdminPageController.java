@@ -61,6 +61,7 @@ public class AdminPageController {
         Stage addUserStage = new Stage();
         // Block all other stage
         addUserStage.initModality(Modality.APPLICATION_MODAL);
+        addUserStage.setTitle("Trung tâm anh ngữ SEA");
 
         // Load the FXML
         FXMLLoader addUserPage = new FXMLLoader(getClass().getResource("../StagesAndScenes/AddUserPage.fxml"));

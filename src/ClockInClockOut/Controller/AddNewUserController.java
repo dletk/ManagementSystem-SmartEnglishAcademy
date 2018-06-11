@@ -16,6 +16,7 @@ public class AddNewUserController extends ConfirmableController {
     @FXML private TextField lastNameTextField;
     @FXML private TextField userNameTextField;
     @FXML private PasswordField passwordField;
+    @FXML private PasswordField confirmPassField;
     @FXML private TextField emailTextField;
     @FXML private TextField phoneTextField;
     @FXML private ChoiceBox<String> roleChoiceBox;
@@ -44,9 +45,12 @@ public class AddNewUserController extends ConfirmableController {
     public void addUserButtonClicked(ActionEvent event) {
         String username = userNameTextField.getText();
         String password = passwordField.getText();
-        if (username.isEmpty() || password.isEmpty()) {
+        String confirmPass = confirmPassField.getText();
+        if (username.isEmpty() || password.isEmpty() || confirmPass.isEmpty()) {
             System.out.println("Username or password is empty, cannot add user");
             return;
+        } else if (!confirmPass.equals(password)) {
+            System.out.println("Password and confirmation do not match");
         } else {
             String firstName = firstNameTextField.getText();
             String lastName = lastNameTextField.getText();
