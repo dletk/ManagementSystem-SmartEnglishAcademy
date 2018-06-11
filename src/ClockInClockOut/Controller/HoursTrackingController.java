@@ -71,10 +71,7 @@ public class HoursTrackingController extends ConfirmableController {
      */
     private void populateTableWithData() {
         // Get all the shifts of current user
-        System.out.println(user.getUsername());
         ArrayList<Shift> shiftsOfUser = modelManager.getShifts().get(user.getUsername());
-
-        System.out.println(modelManager.getShifts().get(user.getUsername()));
 
         // If this user does not have any shift, its shift list will be NULL
         // if so, do not populate the table to avoid crashing

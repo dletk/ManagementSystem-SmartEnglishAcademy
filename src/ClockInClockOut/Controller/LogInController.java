@@ -11,8 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-
 public class LogInController {
 
     private ModelManager modelManager;
@@ -85,7 +83,7 @@ public class LogInController {
      *
      * @param event
      */
-    public void adminLogInClicked(ActionEvent event) throws Exception{
+    public void adminLogInClicked(ActionEvent event) throws Exception {
         // Check to see whether the current user is in admin list
         if (modelManager.isValidAdmin(userNameTextField.getText(), passwordTextField.getText())) {
             // Get the current user from database

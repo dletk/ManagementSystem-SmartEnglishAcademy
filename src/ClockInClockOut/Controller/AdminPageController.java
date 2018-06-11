@@ -11,15 +11,14 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class AdminPageController {
+    // Logic elements of the controller
+    ModelManager modelManager;
+    User user;
     // Elements from UI
     @FXML
     private Button addUserButton;
     @FXML
     private Button logOutButton;
-
-    // Logic elements of the controller
-    ModelManager modelManager;
-    User user;
 
     public AdminPageController(ModelManager modelManager, User user) {
         this.modelManager = modelManager;
@@ -33,6 +32,7 @@ public class AdminPageController {
 
     /**
      * Callback method for logoutButton
+     *
      * @param event
      * @throws Exception
      */
@@ -41,18 +41,13 @@ public class AdminPageController {
         Button logOut = (Button) event.getSource();
         Stage stage = (Stage) logOut.getScene().getWindow();
 
-//        Load the FXML sepratedly to manually set up the controller
-        FXMLLoader logIn = new FXMLLoader(getClass().getResource("../StagesAndScenes/logIn.fxml"));
-
-//        Set up the controller for logIn scene, reuse the current modelManager
-        logIn.setController(new LogInController(modelManager));
-
-        stage.setScene(new Scene(logIn.load()));
+        loadLogInScene(stage);
     }
 
 
     /**
      * Callback method for addUserButton
+     *
      * @param event
      * @throws Exception
      */
@@ -72,5 +67,21 @@ public class AdminPageController {
         // Show and wait for the stage to be closed
         addUserStage.setScene(new Scene(addUserPage.load()));
         addUserStage.showAndWait();
+    }
+
+    /**
+     * Load the log in scene to the given stage
+     *
+     * @param stage
+     * @throws Exception
+     */
+    private void loadLogInScene(Stage stage) throws Exception{
+//        Load the FXML sepratedly to manually set up the controller
+        FXMLLoader logIn = new FXMLLoader(getClass().getResource("../StagesAndScenes/logIn.fxml"));
+
+//        Set up the controller for logIn scene, reuse the current modelManager
+        logIn.setController(new LogInController(modelManager));
+
+        stage.setScene(new Scene(logIn.load()));
     }
 }

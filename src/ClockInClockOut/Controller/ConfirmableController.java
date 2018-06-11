@@ -36,7 +36,7 @@ public class ConfirmableController {
         }
         scene.setController(controller);
 
-         try {
+        try {
             confirmStage.setScene(new Scene(scene.load()));
             confirmStage.showAndWait();
 
