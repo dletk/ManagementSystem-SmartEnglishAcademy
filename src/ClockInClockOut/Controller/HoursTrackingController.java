@@ -16,6 +16,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class HoursTrackingController extends ConfirmableController {
 
     //    The hours tracking table elements
@@ -68,13 +70,23 @@ public class HoursTrackingController extends ConfirmableController {
      * This method populate the table with the current data
      */
     private void populateTableWithData() {
-        ObservableList<Shift> data = FXCollections.observableArrayList(modelManager.getShifts().get(user));
+        // Get all the shifts of current user
+        System.out.println(user.getUsername());
+        ArrayList<Shift> shiftsOfUser = modelManager.getShifts().get(user.getUsername());
 
-        tableHours.setItems(data);
-        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
-        startingTimeColumn.setCellValueFactory(new PropertyValueFactory<>("startingTime"));
-        endingTimeColumn.setCellValueFactory(new PropertyValueFactory<>("endingTime"));
-        lengthColumn.setCellValueFactory(new PropertyValueFactory<>("length"));
+        System.out.println(modelManager.getShifts().get(user.getUsername()));
+
+        // If this user does not have any shift, its shift list will be NULL
+        // if so, do not populate the table to avoid crashing
+        if (shiftsOfUser != null) {
+            ObservableList<Shift> data = FXCollections.observableArrayList(shiftsOfUser);
+
+            tableHours.setItems(data);
+            dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+            startingTimeColumn.setCellValueFactory(new PropertyValueFactory<>("startingTime"));
+            endingTimeColumn.setCellValueFactory(new PropertyValueFactory<>("endingTime"));
+            lengthColumn.setCellValueFactory(new PropertyValueFactory<>("length"));
+        }
     }
 
 

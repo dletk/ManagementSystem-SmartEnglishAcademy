@@ -48,4 +48,12 @@ public class User {
     public String getPassword() {
         return password;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof User) {
+            return this.getUsername().equals(((User) obj).getUsername());
+        }
+        return false;
+    }
 }

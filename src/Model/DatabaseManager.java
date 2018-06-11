@@ -8,7 +8,7 @@ import java.util.Map;
 public class DatabaseManager {
 
     ArrayList<User> users;
-    HashMap<User, ArrayList<Shift>> shifts;
+    HashMap<String, ArrayList<Shift>> shifts;
     private Connection connection;
 
     /**
@@ -98,7 +98,7 @@ public class DatabaseManager {
      *
      * @return the shifts map
      */
-    public HashMap<User, ArrayList<Shift>> getShifts() {
+    public HashMap<String, ArrayList<Shift>> getShifts() {
         return shifts;
     }
 
@@ -126,10 +126,10 @@ public class DatabaseManager {
                                 result.getString("endingTime"),
                                 result.getFloat("length"));
 //                        Initialize the list if the user is new
-                        if (!shifts.containsKey(user)) {
-                            shifts.put(user, new ArrayList<>());
+                        if (!shifts.containsKey(user.getUsername())) {
+                            shifts.put(user.getUsername(), new ArrayList<>());
                         }
-                        shifts.get(user).add(shift);
+                        shifts.get(user.getUsername()).add(shift);
                     }
                 }
             }

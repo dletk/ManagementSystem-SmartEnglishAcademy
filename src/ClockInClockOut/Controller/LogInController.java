@@ -58,26 +58,25 @@ public class LogInController {
      * @param event the Action event from the button
      */
     public void logInClicked(ActionEvent event) throws Exception {
-        ArrayList<User> users = modelManager.getUsers();
-        for (User user : users) {
-            if (modelManager.isValidPassword(userNameTextField.getText(), passwordTextField.getText())) {
-                Button butn = (Button) event.getSource();
+        // Check to see whether the information is from a valid user
+        if (modelManager.isValidPassword(userNameTextField.getText(), passwordTextField.getText())) {
+
+            User user = modelManager.getUser(userNameTextField.getText());
+            Button butn = (Button) event.getSource();
 
 //                Switch to the scene of hours tracking
-                Stage stage = (Stage) butn.getScene().getWindow();
+            Stage stage = (Stage) butn.getScene().getWindow();
 
 //                Load the new Scene
-                FXMLLoader hoursTracking = new FXMLLoader(getClass().getResource("../StagesAndScenes/hoursTracking.fxml"));
-                hoursTracking.setController(new HoursTrackingController(modelManager, user));
+            FXMLLoader hoursTracking = new FXMLLoader(getClass().getResource("../StagesAndScenes/hoursTracking.fxml"));
+            hoursTracking.setController(new HoursTrackingController(modelManager, user));
 
-                stage.setScene(new Scene(hoursTracking.load()));
-                return;
-
-            } else {
-                wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");
-                wrongPasswordLabel.setVisible(true);
-                return;
-            }
+            stage.setScene(new Scene(hoursTracking.load()));
+            return;
+        } else {
+            wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");
+            wrongPasswordLabel.setVisible(true);
+            return;
         }
     }
 
@@ -87,24 +86,23 @@ public class LogInController {
      * @param event
      */
     public void adminLogInClicked(ActionEvent event) throws Exception{
-        ArrayList<User> users = modelManager.getUsers();
-        for (User user : users) {
-            if (modelManager.isValidAdmin(userNameTextField.getText(), passwordTextField.getText())) {
-                FXMLLoader adminPage = new FXMLLoader(getClass().getResource("../StagesAndScenes/AdminPage.fxml"));
-                adminPage.setController(new AdminPageController(modelManager, user));
+        // Check to see whether the current user is in admin list
+        if (modelManager.isValidAdmin(userNameTextField.getText(), passwordTextField.getText())) {
+            // Get the current user from database
+            User user = modelManager.getUser(userNameTextField.getText());
+            FXMLLoader adminPage = new FXMLLoader(getClass().getResource("../StagesAndScenes/AdminPage.fxml"));
+            adminPage.setController(new AdminPageController(modelManager, user));
 
-                Button butn = (Button) event.getSource();
+            Button butn = (Button) event.getSource();
 
 //                Switch to the scene of hours tracking
-                Stage stage = (Stage) butn.getScene().getWindow();
-                stage.setScene(new Scene(adminPage.load()));
-                return;
-            } else {
-                wrongPasswordLabel.setText("You are not an admin or wrong password!");
-                wrongPasswordLabel.setVisible(true);
-                return;
-            }
+            Stage stage = (Stage) butn.getScene().getWindow();
+            stage.setScene(new Scene(adminPage.load()));
+            return;
+        } else {
+            wrongPasswordLabel.setText("You are not an admin or wrong password!");
+            wrongPasswordLabel.setVisible(true);
+            return;
         }
-        wrongPasswordLabel.setVisible(true);
     }
 }

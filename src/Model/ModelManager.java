@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class ModelManager {
     private DatabaseManager databaseManager;
     private ArrayList<User> users;
-    private HashMap<User, ArrayList<Shift>> shifts;
+    private HashMap<String, ArrayList<Shift>> shifts;
 
     public ModelManager() {
         this.databaseManager = new DatabaseManager();
@@ -25,7 +25,7 @@ public class ModelManager {
         return this.users;
     }
 
-    public HashMap<User, ArrayList<Shift>> getShifts() {
+    public HashMap<String, ArrayList<Shift>> getShifts() {
         return this.shifts;
     }
 
@@ -67,8 +67,9 @@ public class ModelManager {
         boolean success = databaseManager.addUser(userID, phone, username.toLowerCase(), firstname, lastname, email, role, password);
 
         if (success) {
-//        After added user, get the users list from database again
+//        After added user, get the users list and the shifts from database again
             users = databaseManager.getUsers();
+            shifts = databaseManager.getShifts();
             return true;
         } else {
             return false;
@@ -108,6 +109,21 @@ public class ModelManager {
     }
 
     /**
+     * Method to get a user from database by username
+     *
+     * @param username the username to retrieve
+     * @return User if username is in database, null otherwise
+     */
+    public User getUser(String username) {
+        for (User user: users) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    /**
      * Method to begin the clock in process for this user
      *
      * @param user
@@ -137,7 +153,7 @@ public class ModelManager {
      */
     public boolean clockOut(User user) {
         // Get the most recent shift of this user
-        Shift lastShift = shifts.get(user).get(0);
+        Shift lastShift = getLastShift(user);
 
         // Check if whether user is currently clocked in
         if (isUserClockedIn(user)) {
@@ -214,10 +230,30 @@ public class ModelManager {
      */
     public boolean isUserClockedIn(User user) {
         // Get the last shift if this user
-        Shift userLastShift = shifts.get(user).get(0);
+        Shift userLastShift = getLastShift(user);
 
-        /* Check whether the last shift has ending time. If it does NOT, then this user is currently clocked in */
-        return userLastShift.getEndingTime().isEmpty();
+        if (userLastShift == null) {
+            return false;
+        } else {
+            /* Check whether the last shift has ending time. If it does NOT, then this user is currently clocked in */
+            return userLastShift.getEndingTime().isEmpty();
+        }
+    }
+
+    /**
+     * Method to return the last shift of the given user
+     * @param user
+     * @return the last shift, or NULL if the current user does not have a shift list (new user)
+     */
+    public Shift getLastShift(User user) {
+        // Get al the user shifts
+        ArrayList<Shift> userShifts = shifts.get(user.getUsername());
+
+        if (userShifts != null) {
+            return userShifts.get(0);
+        } else {
+            return null;
+        }
     }
 
     /**
