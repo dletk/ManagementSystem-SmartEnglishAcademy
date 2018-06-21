@@ -20,7 +20,7 @@
                   <Font name="Impact" size="24.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" stylesheets="@../../styles/adminPage.css" text="Check hours" textFill="#534abc">
+            <Button fx:id="checkHoursButton" mnemonicParsing="false" onAction="#checkHoursButtonClicked" stylesheets="@../../styles/adminPage.css" text="Check hours" textFill="#534abc">
                <font>
                   <Font name="Impact" size="24.0" />
                </font>

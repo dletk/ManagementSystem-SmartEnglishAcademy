@@ -19,6 +19,8 @@ public class AdminPageController {
     private Button addUserButton;
     @FXML
     private Button logOutButton;
+    @FXML
+    private Button checkHoursButton;
 
     public AdminPageController(ModelManager modelManager, User user) {
         this.modelManager = modelManager;
@@ -67,6 +69,23 @@ public class AdminPageController {
         // Show and wait for the stage to be closed
         addUserStage.setScene(new Scene(addUserPage.load()));
         addUserStage.showAndWait();
+    }
+
+    public void checkHoursButtonClicked(ActionEvent event) throws Exception {
+        // Popup a new window for checking hours
+        Stage checkHoursStage = new Stage();
+        checkHoursStage.setTitle("Trung tâm anh ngữ SEA");
+        checkHoursStage.initModality(Modality.APPLICATION_MODAL);
+
+        // Load the FXML file
+        FXMLLoader checkHoursPage = new FXMLLoader(getClass().getResource("../StagesAndScenes/CheckHoursPage.fxml"));
+
+        // Set up the controller
+        checkHoursPage.setController(new CheckHoursController(modelManager));
+
+        // Show and wait to finish
+        checkHoursStage.setScene(new Scene(checkHoursPage.load()));
+        checkHoursStage.showAndWait();
     }
 
     /**
