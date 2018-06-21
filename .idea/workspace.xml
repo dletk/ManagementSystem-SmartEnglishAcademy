@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/Controller/CheckHoursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/Controller/CheckHoursController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/AdminPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/AdminPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/CheckHoursPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/CheckHoursPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DatabaseManager.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,6 +80,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="DatabaseManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/DatabaseManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1529555123662" expanded="true" signature="1710:1736" ph="CREATE TABLE... " />
+                <marker date="1529555123662" expanded="true" signature="1710:1737" ph="CREATE TABLE... missingValue" />
+                <marker date="1529555123662" expanded="true" signature="1710:1756" ph="CREATE TABLE... missingValue" />
+                <marker date="1529555123662" expanded="true" signature="1710:1818" ph="CREATE TABLE... missingValue" />
+                <marker date="1529555123662" expanded="true" signature="2458:2477" ph="SELECT * FRO... Users" />
+                <marker date="1529555123662" expanded="true" signature="3722:3742" ph="SELECT * FRO... Shifts" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,11 +126,8 @@
       <file leaf-file-name="HoursTrackingController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-966">
-              <caret line="89" column="7" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -155,17 +168,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckHoursController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CheckHoursController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/CheckHoursController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+            <state relative-caret-position="1320">
+              <caret line="88" column="57" lean-forward="true" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#996#997#0" expanded="true" />
                 <element signature="e#1044#1045#0" expanded="true" />
                 <element signature="e#2446#2447#0" expanded="true" />
                 <element signature="e#2464#2465#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="196" column="41" selection-start-line="196" selection-start-column="41" selection-end-line="196" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -239,7 +264,6 @@
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmPageController.java" />
         <option value="$PROJECT_DIR$/src/Model/User.java" />
         <option value="$PROJECT_DIR$/src/Model/ModelManager.java" />
-        <option value="$PROJECT_DIR$/src/Model/DatabaseManager.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/AddNewUserController.java" />
@@ -247,6 +271,7 @@
         <option value="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/CheckHoursPage.fxml" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/CheckHoursController.java" />
+        <option value="$PROJECT_DIR$/src/Model/DatabaseManager.java" />
       </list>
     </option>
   </component>
@@ -292,6 +317,25 @@
               <item name="ManagementSystemSEA" type="b2602c69:ProjectViewProjectNode" />
               <item name="ManagementSystemSEA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ManagementSystemSEA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ManagementSystemSEA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ClockInClockOut" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ManagementSystemSEA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ManagementSystemSEA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ClockInClockOut" type="462c0819:PsiDirectoryNode" />
+              <item name="StagesAndScenes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ManagementSystemSEA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ManagementSystemSEA" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -447,12 +491,12 @@
       <workItem from="1528251691042" duration="3055000" />
       <workItem from="1528585789428" duration="6405000" />
       <workItem from="1528666751732" duration="17697000" />
-      <workItem from="1529547191373" duration="4554000" />
+      <workItem from="1529547191373" duration="6806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96857000" />
+    <option name="totallyTimeSpent" value="99109000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,8 +521,8 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.37709498" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32681563" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.37709498" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32681563" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5695067" visible="true" weight="0.23891273" />
@@ -528,12 +572,12 @@
           <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1528688763346" expanded="true" signature="1583:1609" ph="CREATE TABLE... " />
-            <marker date="1528688763346" expanded="true" signature="1583:1610" ph="CREATE TABLE... missingValue" />
-            <marker date="1528688763346" expanded="true" signature="1583:1629" ph="CREATE TABLE... missingValue" />
-            <marker date="1528688763346" expanded="true" signature="1583:1691" ph="CREATE TABLE... missingValue" />
-            <marker date="1528688763346" expanded="true" signature="2331:2350" ph="SELECT * FRO... Users" />
-            <marker date="1528688763346" expanded="true" signature="3595:3615" ph="SELECT * FRO... Shifts" />
+            <marker date="1529555123662" expanded="true" signature="1710:1736" ph="CREATE TABLE... " />
+            <marker date="1529555123662" expanded="true" signature="1710:1737" ph="CREATE TABLE... missingValue" />
+            <marker date="1529555123662" expanded="true" signature="1710:1756" ph="CREATE TABLE... missingValue" />
+            <marker date="1529555123662" expanded="true" signature="1710:1818" ph="CREATE TABLE... missingValue" />
+            <marker date="1529555123662" expanded="true" signature="2458:2477" ph="SELECT * FRO... Users" />
+            <marker date="1529555123662" expanded="true" signature="3722:3742" ph="SELECT * FRO... Shifts" />
           </folding>
         </state>
       </provider>
@@ -591,12 +635,12 @@
           <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1528688763346" expanded="true" signature="1583:1609" ph="CREATE TABLE... " />
-            <marker date="1528688763346" expanded="true" signature="1583:1610" ph="CREATE TABLE... missingValue" />
-            <marker date="1528688763346" expanded="true" signature="1583:1629" ph="CREATE TABLE... missingValue" />
-            <marker date="1528688763346" expanded="true" signature="1583:1691" ph="CREATE TABLE... missingValue" />
-            <marker date="1528688763346" expanded="true" signature="2331:2350" ph="SELECT * FRO... Users" />
-            <marker date="1528688763346" expanded="true" signature="3595:3615" ph="SELECT * FRO... Shifts" />
+            <marker date="1529555123662" expanded="true" signature="1710:1736" ph="CREATE TABLE... " />
+            <marker date="1529555123662" expanded="true" signature="1710:1737" ph="CREATE TABLE... missingValue" />
+            <marker date="1529555123662" expanded="true" signature="1710:1756" ph="CREATE TABLE... missingValue" />
+            <marker date="1529555123662" expanded="true" signature="1710:1818" ph="CREATE TABLE... missingValue" />
+            <marker date="1529555123662" expanded="true" signature="2458:2477" ph="SELECT * FRO... Users" />
+            <marker date="1529555123662" expanded="true" signature="3722:3742" ph="SELECT * FRO... Shifts" />
           </folding>
         </state>
       </provider>
@@ -805,32 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
-          <caret line="196" column="41" selection-start-line="196" selection-start-column="41" selection-end-line="196" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/DatabaseManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="133" column="17" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1528688763346" expanded="true" signature="1583:1609" ph="CREATE TABLE... " />
-            <marker date="1528688763346" expanded="true" signature="1583:1610" ph="CREATE TABLE... missingValue" />
-            <marker date="1528688763346" expanded="true" signature="1583:1629" ph="CREATE TABLE... missingValue" />
-            <marker date="1528688763346" expanded="true" signature="1583:1691" ph="CREATE TABLE... missingValue" />
-            <marker date="1528688763346" expanded="true" signature="2331:2350" ph="SELECT * FRO... Users" />
-            <marker date="1528688763346" expanded="true" signature="3595:3615" ph="SELECT * FRO... Shifts" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -942,26 +960,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-966">
-          <caret line="89" column="7" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/CheckHoursController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+        <state relative-caret-position="1320">
+          <caret line="88" column="57" lean-forward="true" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#996#997#0" expanded="true" />
             <element signature="e#1044#1045#0" expanded="true" />
             <element signature="e#2446#2447#0" expanded="true" />
             <element signature="e#2464#2465#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="196" column="41" selection-start-line="196" selection-start-column="41" selection-end-line="196" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1529555123662" expanded="true" signature="1710:1736" ph="CREATE TABLE... " />
+            <marker date="1529555123662" expanded="true" signature="1710:1737" ph="CREATE TABLE... missingValue" />
+            <marker date="1529555123662" expanded="true" signature="1710:1756" ph="CREATE TABLE... missingValue" />
+            <marker date="1529555123662" expanded="true" signature="1710:1818" ph="CREATE TABLE... missingValue" />
+            <marker date="1529555123662" expanded="true" signature="2458:2477" ph="SELECT * FRO... Users" />
+            <marker date="1529555123662" expanded="true" signature="3722:3742" ph="SELECT * FRO... Shifts" />
           </folding>
         </state>
       </provider>

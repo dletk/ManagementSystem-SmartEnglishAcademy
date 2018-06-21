@@ -27,6 +27,9 @@ public class DatabaseManager {
                     "username TEXT NOT NULL UNIQUE, password TEXT NOT NULL, firstname TEXT, lastname TEXT, email TEXT, phone INT, role TEXT");
             createTable("Shifts", "startingTime TEXT PRIMARY KEY NOT NULL, endingTime TEXT, length REAL, " +
                     "userID INT, FOREIGN KEY(userID) REFERENCES Users(userID)");
+
+            // Create the admin user
+            addUser(1, 935072859,"admin", "admin", "admin", "", "admin", "adminSEA123");
         } catch (Exception e) {
             System.out.println(e);
             e.printStackTrace();
