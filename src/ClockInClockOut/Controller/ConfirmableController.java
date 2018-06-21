@@ -48,6 +48,11 @@ public class ConfirmableController {
         }
     }
 
+    /**
+     * Method to show the confirmation window with default confirming message
+     * @param action the action to be confirmed
+     * @return true if the action is confirmed
+     */
     protected boolean showConfirmationAndGetResult(String action) {
         return this.showConfirmationAndGetResult(action, "");
     }
