@@ -55,7 +55,7 @@ public class LogInController {
      *
      * @param event the Action event from the button
      */
-    public void logInClicked(ActionEvent event) throws Exception {
+    public void logInClicked(ActionEvent event) {
         // Check to see whether the information is from a valid user
         if (modelManager.isValidPassword(userNameTextField.getText(), passwordTextField.getText())) {
 
@@ -69,7 +69,11 @@ public class LogInController {
             FXMLLoader hoursTracking = new FXMLLoader(getClass().getResource("../StagesAndScenes/hoursTracking.fxml"));
             hoursTracking.setController(new HoursTrackingController(modelManager, user));
 
-            stage.setScene(new Scene(hoursTracking.load()));
+            try {
+                stage.setScene(new Scene(hoursTracking.load()));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             return;
         } else {
             wrongPasswordLabel.setText("Sai mật khẩu hoặc tên đăng nhập");
@@ -83,7 +87,7 @@ public class LogInController {
      *
      * @param event
      */
-    public void adminLogInClicked(ActionEvent event) throws Exception {
+    public void adminLogInClicked(ActionEvent event) {
         // Check to see whether the current user is in admin list
         if (modelManager.isValidAdmin(userNameTextField.getText(), passwordTextField.getText())) {
             // Get the current user from database
@@ -95,7 +99,11 @@ public class LogInController {
 
 //                Switch to the scene of hours tracking
             Stage stage = (Stage) butn.getScene().getWindow();
-            stage.setScene(new Scene(adminPage.load()));
+            try {
+                stage.setScene(new Scene(adminPage.load()));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             return;
         } else {
             wrongPasswordLabel.setText("You are not an admin or wrong password!");

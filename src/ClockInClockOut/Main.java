@@ -13,13 +13,17 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        FXMLLoader logIn = new FXMLLoader(getClass().getResource("StagesAndScenes/logIn.fxml"));
-        logIn.setController(new LogInController());
+    public void start(Stage primaryStage) {
+        try {
+            FXMLLoader logIn = new FXMLLoader(getClass().getResource("StagesAndScenes/logIn.fxml"));
+            logIn.setController(new LogInController());
 
-        primaryStage.setTitle("Trung tâm anh ngữ SEA");
-        primaryStage.setScene(new Scene(logIn.load()));
+            primaryStage.setTitle("Trung tâm anh ngữ SEA");
+            primaryStage.setScene(new Scene(logIn.load()));
 
-        primaryStage.show();
+            primaryStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

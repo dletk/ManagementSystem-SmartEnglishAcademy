@@ -93,7 +93,7 @@ public class HoursTrackingController extends ConfirmableController {
      *
      * @param event
      */
-    public void logOutClicked(ActionEvent event) throws Exception {
+    public void logOutClicked(ActionEvent event) {
 //        Get the current StagesAndScenes of the logOut button
         Button logOut = (Button) event.getSource();
         Stage stage = (Stage) logOut.getScene().getWindow();
@@ -103,7 +103,12 @@ public class HoursTrackingController extends ConfirmableController {
 
 //        Set up the controller for logIn scene, reuse the current modelManager
         logIn.setController(new LogInController(modelManager));
-        stage.setScene(new Scene(logIn.load()));
+        try {
+
+            stage.setScene(new Scene(logIn.load()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**

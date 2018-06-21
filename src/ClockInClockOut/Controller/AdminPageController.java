@@ -38,12 +38,15 @@ public class AdminPageController {
      * @param event
      * @throws Exception
      */
-    public void logOutButtonClicked(ActionEvent event) throws Exception {
+    public void logOutButtonClicked(ActionEvent event) {
         // Get the current StagesAndScenes of the logOut button
         Button logOut = (Button) event.getSource();
         Stage stage = (Stage) logOut.getScene().getWindow();
-
-        loadLogInScene(stage);
+        try {
+            loadLogInScene(stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -53,7 +56,7 @@ public class AdminPageController {
      * @param event
      * @throws Exception
      */
-    public void addUserButtonClicked(ActionEvent event) throws Exception {
+    public void addUserButtonClicked(ActionEvent event) {
         // Popup a new window for adding user
         Stage addUserStage = new Stage();
         // Block all other stage
@@ -67,11 +70,16 @@ public class AdminPageController {
         addUserPage.setController(new AddNewUserController(modelManager));
 
         // Show and wait for the stage to be closed
-        addUserStage.setScene(new Scene(addUserPage.load()));
-        addUserStage.showAndWait();
+        try {
+
+            addUserStage.setScene(new Scene(addUserPage.load()));
+            addUserStage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    public void checkHoursButtonClicked(ActionEvent event) throws Exception {
+    public void checkHoursButtonClicked(ActionEvent event) {
         // Popup a new window for checking hours
         Stage checkHoursStage = new Stage();
         checkHoursStage.setTitle("Trung tâm anh ngữ SEA");
@@ -84,8 +92,12 @@ public class AdminPageController {
         checkHoursPage.setController(new CheckHoursController(modelManager));
 
         // Show and wait to finish
-        checkHoursStage.setScene(new Scene(checkHoursPage.load()));
-        checkHoursStage.showAndWait();
+        try {
+            checkHoursStage.setScene(new Scene(checkHoursPage.load()));
+            checkHoursStage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
