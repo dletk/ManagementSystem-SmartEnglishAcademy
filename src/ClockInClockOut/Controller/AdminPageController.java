@@ -64,7 +64,7 @@ public class AdminPageController {
         addUserStage.setTitle("Trung tâm anh ngữ SEA");
 
         // Load the FXML
-        FXMLLoader addUserPage = new FXMLLoader(getClass().getResource("../StagesAndScenes/AddUserPage.fxml"));
+        FXMLLoader addUserPage = new FXMLLoader(getClass().getResource("/StagesAndScenes/AddUserPage.fxml"));
 
         // Set up the controller for addUserPage, passing the current modelManager to reuse
         addUserPage.setController(new AddNewUserController(modelManager));
@@ -86,7 +86,7 @@ public class AdminPageController {
         checkHoursStage.initModality(Modality.APPLICATION_MODAL);
 
         // Load the FXML file
-        FXMLLoader checkHoursPage = new FXMLLoader(getClass().getResource("../StagesAndScenes/CheckHoursPage.fxml"));
+        FXMLLoader checkHoursPage = new FXMLLoader(getClass().getResource("/StagesAndScenes/CheckHoursPage.fxml"));
 
         // Set up the controller
         checkHoursPage.setController(new CheckHoursController(modelManager));
@@ -108,7 +108,7 @@ public class AdminPageController {
      */
     private void loadLogInScene(Stage stage) throws Exception{
 //        Load the FXML sepratedly to manually set up the controller
-        FXMLLoader logIn = new FXMLLoader(getClass().getResource("../StagesAndScenes/logIn.fxml"));
+        FXMLLoader logIn = new FXMLLoader(getClass().getResource("/StagesAndScenes/logIn.fxml"));
 
 //        Set up the controller for logIn scene, reuse the current modelManager
         logIn.setController(new LogInController(modelManager));

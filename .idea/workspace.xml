@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ManagementSystemSEA:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seaDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/seaDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagementSystemSEA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ManagementSystemSEA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Controller/AdminPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Controller/AdminPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Controller/ConfirmableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Controller/ConfirmableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Controller/HoursTrackingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Controller/HoursTrackingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Controller/LogInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Controller/LogInController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/StagesAndScenes/AddUserPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/StagesAndScenes/AdminPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/StagesAndScenes/CheckHoursPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/StagesAndScenes/ConfirmPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/StagesAndScenes/hoursTracking.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ManagementSystemSEA/ClockInClockOut/StagesAndScenes/logIn.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClockInClockOut/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/AddUserPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/res/StagesAndScenes/AddUserPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/AdminPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/res/StagesAndScenes/AdminPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/CheckHoursPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/res/StagesAndScenes/CheckHoursPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/ConfirmPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/res/StagesAndScenes/ConfirmPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/hoursTracking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/res/StagesAndScenes/hoursTracking.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/logIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/res/StagesAndScenes/logIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/posterSEA.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/res/posterSEA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/adminPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/res/styles/adminPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/buttonHoursTracking.css" beforeDir="false" afterPath="$PROJECT_DIR$/res/styles/buttonHoursTracking.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/buttonLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/res/styles/buttonLogin.css" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,11 +111,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DatabaseManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatabaseManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/DatabaseManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="128">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1529555123662" expanded="true" signature="1710:1736" ph="CREATE TABLE... " />
@@ -99,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
+            <state relative-caret-position="159">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,14 +141,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/User.java">
+      <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfirmPageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,8 +168,11 @@
       <file leaf-file-name="HoursTrackingController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            <state relative-caret-position="148">
+              <caret line="170" column="49" selection-start-line="170" selection-start-column="49" selection-end-line="170" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,8 +180,8 @@
       <file leaf-file-name="ConfirmableController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmableController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="257">
+              <caret line="29" column="70" lean-forward="true" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,23 +189,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddNewUserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/AddNewUserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminPageController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdminPageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-636">
-              <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+            <state relative-caret-position="163">
+              <caret line="110" column="66" selection-start-line="110" selection-start-column="66" selection-end-line="110" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,8 +204,8 @@
       <file leaf-file-name="CheckHoursController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/CheckHoursController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="88" column="57" lean-forward="true" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
+            <state relative-caret-position="1294">
+              <caret line="88" column="57" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#996#997#0" expanded="true" />
@@ -188,10 +220,25 @@
       <file leaf-file-name="ModelManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="196" column="41" selection-start-line="196" selection-start-column="41" selection-end-line="196" selection-end-column="41" />
+            <state relative-caret-position="119">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shift.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Shift.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding>
+                <element signature="e#764#765#0" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -228,6 +275,7 @@
       <find>clockout</find>
       <find>shifts.get</find>
       <find>shifts</find>
+      <find>throw</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -248,8 +296,6 @@
         <option value="$PROJECT_DIR$/src/ClockInClockOut/ClockInClockOutController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/hoursTracking.fxml" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/logIn.fxml" />
-        <option value="$PROJECT_DIR$/src/ClockInClockOut/Main.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shift.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/LogInController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/HoursTrackingController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/confirmLogIn.fxml" />
@@ -265,14 +311,16 @@
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmPageController.java" />
         <option value="$PROJECT_DIR$/src/Model/User.java" />
         <option value="$PROJECT_DIR$/src/Model/ModelManager.java" />
-        <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java" />
-        <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/AddNewUserController.java" />
-        <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmableController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/CheckHoursPage.fxml" />
-        <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java" />
         <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/CheckHoursController.java" />
         <option value="$PROJECT_DIR$/src/Model/DatabaseManager.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shift.java" />
+        <option value="$PROJECT_DIR$/src/ClockInClockOut/Main.java" />
+        <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java" />
+        <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java" />
+        <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmableController.java" />
+        <option value="$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java" />
       </list>
     </option>
   </component>
@@ -312,31 +360,12 @@
             <path>
               <item name="ManagementSystemSEA" type="b2602c69:ProjectViewProjectNode" />
               <item name="ManagementSystemSEA" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ManagementSystemSEA" type="b2602c69:ProjectViewProjectNode" />
               <item name="ManagementSystemSEA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ManagementSystemSEA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ManagementSystemSEA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ClockInClockOut" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ManagementSystemSEA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ManagementSystemSEA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ClockInClockOut" type="462c0819:PsiDirectoryNode" />
-              <item name="StagesAndScenes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ManagementSystemSEA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ManagementSystemSEA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -359,21 +388,23 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
     <property name="dynamic.classpath" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/ClockInClockOut/Stage" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/ClockInClockOut/Stage" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/res" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res" />
+      <recent name="$PROJECT_DIR$/ClockInClockOut" />
+      <recent name="$PROJECT_DIR$/src/ClockInClockOut/Stage" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -492,12 +523,12 @@
       <workItem from="1528251691042" duration="3055000" />
       <workItem from="1528585789428" duration="6405000" />
       <workItem from="1528666751732" duration="17697000" />
-      <workItem from="1529547191373" duration="7454000" />
+      <workItem from="1529547191373" duration="11202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99757000" />
+    <option name="totallyTimeSpent" value="103505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,6 +541,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4985694" weight="0.32681563" />
@@ -517,16 +549,17 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50143063" side_tool="true" weight="0.3282123" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50143063" side_tool="true" weight="0.32681563" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.37709498" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32681563" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.37709498" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4985694" weight="0.32681563" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5695067" visible="true" weight="0.23891273" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -536,7 +569,6 @@
       <window_info anchor="right" id="JetGradle" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
       <window_info anchor="bottom" id="Changes" order="7" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Profiler" order="7" />
@@ -582,7 +614,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/logIn.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/logIn.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -590,7 +622,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/buttonLogin.css">
+    <entry file="file://$PROJECT_DIR$/res/styles/buttonLogin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
@@ -614,7 +646,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/logIn.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/logIn.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -622,7 +654,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/buttonLogin.css">
+    <entry file="file://$PROJECT_DIR$/res/styles/buttonLogin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
@@ -662,7 +694,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/logIn.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/logIn.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -680,7 +712,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/logIn.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/logIn.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -716,7 +748,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/logIn.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/logIn.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -747,19 +779,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/confirmClockOut.fxml" />
     <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/ConfirmStage.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/Shift.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-          <folding>
-            <element signature="e#764#765#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/javafx-src.zip!/javafx/stage/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
@@ -778,7 +797,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/ConfirmPage.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/ConfirmPage.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
@@ -786,7 +805,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/AddUserPage.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/AddUserPage.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -823,7 +842,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/AdminPage.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/AdminPage.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -831,17 +850,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/hoursTracking.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/hoursTracking.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -860,16 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -877,35 +876,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/adminPage.css">
+    <entry file="file://$PROJECT_DIR$/res/styles/adminPage.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/buttonLogin.css">
+    <entry file="file://$PROJECT_DIR$/res/styles/buttonLogin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/StagesAndScenes/CheckHoursPage.fxml">
+    <entry file="file://$PROJECT_DIR$/res/StagesAndScenes/CheckHoursPage.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmableController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -916,20 +905,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/buttonHoursTracking.css">
+    <entry file="file://$PROJECT_DIR$/res/styles/buttonHoursTracking.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="98" column="19" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -940,30 +919,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-636">
-          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/AddNewUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="136">
+          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/CheckHoursController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="88" column="57" lean-forward="true" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
+        <state relative-caret-position="1294">
+          <caret line="88" column="57" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#996#997#0" expanded="true" />
@@ -974,27 +945,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java">
+    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="196" column="41" selection-start-line="196" selection-start-column="41" selection-end-line="196" selection-end-column="41" />
+        <state relative-caret-position="401">
+          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shift.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/DatabaseManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="128">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1529555123662" expanded="true" signature="1710:1736" ph="CREATE TABLE... " />
@@ -1007,16 +984,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/ModelManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/LogInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/HoursTrackingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="170" column="49" selection-start-line="170" selection-start-column="49" selection-end-line="170" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/ConfirmableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="29" column="70" lean-forward="true" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClockInClockOut/Controller/AdminPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="110" column="66" selection-start-line="110" selection-start-column="66" selection-end-line="110" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>ManagementSystemSEA:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -66,7 +66,7 @@ public class LogInController {
             Stage stage = (Stage) butn.getScene().getWindow();
 
 //                Load the new Scene
-            FXMLLoader hoursTracking = new FXMLLoader(getClass().getResource("../StagesAndScenes/hoursTracking.fxml"));
+            FXMLLoader hoursTracking = new FXMLLoader(getClass().getResource("/StagesAndScenes/hoursTracking.fxml"));
             hoursTracking.setController(new HoursTrackingController(modelManager, user));
 
             try {
@@ -92,7 +92,7 @@ public class LogInController {
         if (modelManager.isValidAdmin(userNameTextField.getText(), passwordTextField.getText())) {
             // Get the current user from database
             User user = modelManager.getUser(userNameTextField.getText());
-            FXMLLoader adminPage = new FXMLLoader(getClass().getResource("../StagesAndScenes/AdminPage.fxml"));
+            FXMLLoader adminPage = new FXMLLoader(getClass().getResource("/StagesAndScenes/AdminPage.fxml"));
             adminPage.setController(new AdminPageController(modelManager, user));
 
             Button butn = (Button) event.getSource();

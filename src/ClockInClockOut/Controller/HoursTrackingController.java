@@ -99,7 +99,7 @@ public class HoursTrackingController extends ConfirmableController {
         Stage stage = (Stage) logOut.getScene().getWindow();
 
 //        Load the FXML sepratedly to manually set up the controller
-        FXMLLoader logIn = new FXMLLoader(getClass().getResource("../StagesAndScenes/logIn.fxml"));
+        FXMLLoader logIn = new FXMLLoader(getClass().getResource("/StagesAndScenes/logIn.fxml"));
 
 //        Set up the controller for logIn scene, reuse the current modelManager
         logIn.setController(new LogInController(modelManager));

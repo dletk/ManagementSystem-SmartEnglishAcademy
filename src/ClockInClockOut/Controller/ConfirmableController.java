@@ -25,7 +25,7 @@ public class ConfirmableController {
         confirmStage.initModality(Modality.APPLICATION_MODAL);
 
         // Prepare the scene
-        FXMLLoader scene = new FXMLLoader(getClass().getResource("../StagesAndScenes/ConfirmPage.fxml"));
+        FXMLLoader scene = new FXMLLoader(getClass().getResource("/StagesAndScenes/ConfirmPage.fxml"));
 
         // Create the controller with the input is the selected action
         ConfirmPageController controller;

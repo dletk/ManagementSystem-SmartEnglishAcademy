@@ -15,7 +15,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader logIn = new FXMLLoader(getClass().getResource("StagesAndScenes/logIn.fxml"));
+            FXMLLoader logIn = new FXMLLoader(getClass().getResource("/StagesAndScenes/logIn.fxml"));
             logIn.setController(new LogInController());
 
             primaryStage.setTitle("Trung tâm anh ngữ SEA");
